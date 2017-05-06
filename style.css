@@ -1,0 +1,500 @@
+/* DIV kolone */
+
+#column-left{ float: left; width: 25%; }
+#column-right{ float: right; width: 25%; text-align: right; }
+#column-center{ display: inline-block; width: 50%; }
+
+/* Uvodni deo sajta */
+
+
+#uvod {
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+#naslov {
+	text-align: center;
+	color: yellow;
+	font-family: Courier New;
+	-webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+	animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+#naslov:hover {
+	color: lightblue;
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
+}
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+/* Home div */
+
+#Home_levo {display: inline-block; float: left; width: 50%;}
+#Home_desno {display: inline-block; float: right; width: 50%;}
+
+/* Control Panel */
+
+#CP_kategorije {
+	background: red;
+	border: solid blue;
+	padding: 2%;
+	margin-left: 50%;
+}
+
+#changeBackground {
+	display: none;
+}
+
+#changeUvod {
+	display: none;
+}
+
+#changeCalc {
+	display: none;
+}
+
+#changeToDo {
+	display: none;
+}
+
+#changeOstalo {
+	display: none;
+}
+
+#changeExperiments {
+	display: none;
+}
+
+/* Ostali elementi sajta */
+
+#marquee1{
+	color: yellow;
+}
+
+.column{
+	color: white;
+}
+
+.checktext{
+	color: white;
+	display: inline-block;
+	line-height: 1%;
+}
+
+.radialTema {
+	color: white;
+	display: inline-block;
+	line-height: 1px;
+}
+
+.radialContent {
+	color: white;
+	display: inline-block;
+	line-height: 0.01;
+}
+
+.info{
+	color: white;
+}
+
+.mikac_inc{
+	color: yellow;
+}
+
+#changeContent{
+	background-color: blue;
+	border: solid red;
+	width: 65%;
+}
+
+#changeTheme{
+	border-top: 1px solid white;
+	width: 65%;
+}
+
+body {
+	background: linear-gradient(to right, blue , red);
+}
+
+#virtualRadio1{
+	display: inline-block;
+}
+
+
+#virtualRadio2{
+	visibility: hidden;
+}
+
+.virtualButtons {
+	visibility: hidden;
+}
+
+#BuildInfoDiv {
+	display: block;
+
+}
+
+#BuildInfoButtons {
+	display: none;
+}
+
+#BuildInfoList03000 {
+	display: none;
+}
+
+#BuildInfoList04000 {
+	display: none;
+}
+
+.buttonInfo:hover {
+	background-color: white;
+	color: red;
+}
+
+.buildinfo {
+	color: white;
+}
+
+.buttonVirtual:hover {
+	background-color: yellow;
+	color: blue;
+}
+
+/* Kalkulator */
+
+#Calculator {
+	display: none;
+}
+
+#znak{
+	color: white;
+}
+
+#znakjednako{
+	color: white;
+}
+
+#znakkosacrta{
+	color: white;
+}
+
+#rezultat {
+	border: none;
+    border-bottom: 2px solid red;
+    border-radius: 4px;
+    background-color: yellow;
+}
+
+.button1:hover {
+	background-color: lightblue;
+	color: red;
+}
+
+
+.button2:hover {
+	background-color: green;
+	color: yellow;
+}
+
+.button3:hover {
+	background-color: black;
+	color: lightgreen;
+}
+
+.buttonTrig:hover {
+	background-color: yellow;
+	color: darkblue;
+}
+
+.buttonRand:hover {
+	background-color: purple;
+	color: white;
+}
+
+#abs:hover {
+
+}
+
+#Calc_Izracunaj {
+	font-size: 24px;
+	background-color: white;
+    color: black;
+    border: 2px solid red;
+    transition-duration: 0.4s;
+}
+
+#Calc_Izracunaj:hover {
+	font-size: 24px;
+	background-color: red;
+    color: black;
+    border: 2px solid red;
+}
+
+
+/* Štoperica */
+
+#Stoperica {
+	display: none;
+	text-align: center;
+
+}
+
+.Output {
+	color: yellow;
+	font-size: 28pt;
+}
+
+#StopericastartPause:hover {
+	background-color: yellow;
+	color: blue;
+}
+
+#StopericaReset:hover {
+	background-color: yellow;
+	color: blue;
+}
+
+#StopericaZastava:hover {
+	background-color: yellow;
+	color: blue;
+}
+
+#StopericaMove:hover {
+	background-color: yellow;
+	color: blue;
+}
+
+#StopericaZastave {
+	color: yellow;
+}
+
+#StopericaMoved {
+	font-family: courier new;
+	font-size: 18px;
+	color: yellow;
+}
+
+/* Random funkcije */
+
+#Random {
+	text-align: center;
+	display: none;
+}
+
+#Random1x2x3x {
+	background: linear-gradient(to right, red , blue);
+}
+
+#Random1x {
+	display: none;
+}
+
+.buttonRandom:hover {
+	color: white;
+	background-color: green;
+}
+
+.RNDradialContent {
+	color: white;
+	display: inline-block;
+	line-height: 0.01;
+}
+
+
+#Random1x_Levo {float: left; width: 25%;}
+#Random1x_Desno {float: left; width: 75%;}
+
+#RandomSabiranjeBrojevi {
+	display: inline;
+}
+
+
+
+#Random1xSabiranje {
+	display: none;
+	text-align: center;
+	background-color: yellow;
+}
+
+#Random2x {
+	display: none;
+}
+
+#Random3x {
+	display: none;
+}
+
+#Random3xOpcije {
+	display: none;
+}
+
+.Rndinfo {
+	color: white;
+}
+
+#Random4x {
+	display: none;
+}
+
+
+#Random3xInfoP {
+	display: none;
+}
+
+#RandomKockicaDiv {
+	display: none;
+}
+
+#Random1x_Br_Kock {
+	display: inline-block;
+}
+
+#Random5x {
+	display: none;
+	text-align: center;
+}
+
+#Random5x_levo {float: left; width: 75%;}
+#Random5x_desno {float: right; width: 25%;}
+
+#Random5xSrednjiContent {
+	text-align: center;
+}
+
+#GGIzbor {
+	display: none;
+}
+#GGIzvuci {
+	display: none;
+	text-align: center;
+}
+#GGIzaberi {
+	display: none;
+	text-align: center;
+}
+#GGInput {
+	display: none;
+	text-align: center;
+	float: inline;
+}
+#GGProveri {
+	display: none;
+	text-align: center;
+	float: inline;
+}
+#GGPretragaDiv {
+	display: none;
+	text-align: center;
+	background-color: black;
+}
+
+.GGtext {
+	color: white;
+}
+/*------>>> To- Do lista css */
+
+#todolevo {
+	float: left;
+	width: 50%;
+}
+
+#tododesno {
+	float: right;
+	width: 50%;
+
+}
+
+#todosettings {
+	text-align: center;
+	display: inline-block;
+}
+
+#todonameinput2 {
+	text-align: center;
+	display: inline-block;
+}
+
+#To-Do {
+	display: none;
+	text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    color: white;
+}
+
+.buttontodo:hover {
+	background-color: yellow;
+	color: darkblue;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#todonameinput1{
+	display: none;
+	text-align: center;
+}
+
+#todonameinput2{
+	display: none;
+	text-align: center;
+}
+
+#todoname {
+	color: yellow;
+}
+
+#myUL {
+	color: yellow;
+	font-size: 20px;
+}
+
+#titlearhiva {
+	font-size: 20px;
+}
+
+#arhiva {
+	color: yellow;
+	font-size: 20px;
+	text-decoration: line-through;
+}
+
+/* Pomodoro */
+
+#Pomodoro {
+	display: none;
+	text-align: center;
+}
+
+#PomReset {
+	background-color: red;
+	color: white;
+}
+
+.buttonPom:hover {
+	background-color: yellow;
+	color: blue;
+}
+
+#PomObjasnjenjeText {
+	color: white;
+}
+
+/* Bojeee */
+
+#Boje {
+	display: none;
+}

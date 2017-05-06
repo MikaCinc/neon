@@ -1,0 +1,521 @@
+<html>
+	<head>
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		<title>Project: /NEON/</title>
+	</head>
+	<body>
+		<div id="container" style="display: block">
+			<p id="marquee1" class="marquee"><marquee>//Multifunkcionalan sajt/ Project: /NEON/ / BETA verzija sajta(0.3.000); U verziji 0.4.000 - Control Panel + "Glavni gradovi" + Expriments; Autor: Mihajlo Marjanovic; RAF Challenge 2017; GSM Nis; JS(REACT), HTML, CSS//</marquee></p>
+			<div id="column-left"><p class="column">RadialButtons(Menjaj Content)</p>
+
+			<p class="mikac_inc"><b>mikac_inc</b></p>
+
+				<div id="changeContent">
+				<p class="radialContent">Home: </p><input type="radio" class="radio2" id="radioContent0" name="radioContent2" checked="checked" onchange="changeContent0()">
+				<br>
+				<p class="radialContent">Kalkulator: </p><input type="radio" class="radio2" id="radioContent1" name="radioContent2" onchange="changeContent1()">
+				<br>
+				<p class="radialContent">Stoperica: </p><input type="radio" class="radio2" id="radioContent2" name="radioContent2" onchange="changeContent2()">
+				<br>
+				<p class="radialContent">To-Do: </p><input type="radio" class="radio2" id="radioContent3" name="radioContent2" onchange="changeContent3()">
+				<br>
+				<p class="radialContent">Pomodoro: </p><input type="radio" class="radio2" id="radioContent5" name="radioContent2" onchange="changeContent5()">
+				<br>
+				<p class="radialContent">Random operacije: </p><input type="radio" class="radio2" id="radioContent4" name="radioContent2" onchange="changeContent4()">
+				<br>
+				<p class="radialContent">Boje: </p><input type="radio" class="radio2" id="radioContent6" name="radioContent2" onchange="changeContent6()">
+				</div>
+				<br>
+				<div id="ChangeTheme">
+					<p class="radialTema">Podrazumevana tema: </p><input type="radio" class="radio1" id="radioTheme1" name="radioContent1" checked="checked" onchange="changeTheme1()">
+						<br>
+					<p class="radialTema">Kontrast tema: </p><input type="radio" class="radio1" id="radioTheme2" name="radioContent1" onchange="changeTheme2()">
+						<br>
+					<p class="radialTema">Dark Mode: </p><input type="radio" class="radio1" id="radioTheme3" name="radioContent1" onchange="changeTheme3()">
+				</div>
+
+   			</div>
+
+   			<div id="column-center" id="center"><p id="column-center-text" class="column">Uvod + Sadrzaj</p>
+
+   				<div id="uvod">
+					<h1 id="naslov">Project: /NEON/</h1>
+					<br>
+					<p id="datum" class="info"></p>
+					<script>
+						var datum = new Date()
+						document.getElementById("datum").innerHTML = "Danasnji datum je: " + datum.toDateString();
+					</script>
+						<p id="trajanje" class="info"></p>
+						<p id="kolikojesati" class="info"></p>
+					<script>
+						var i1 = 0;
+						var interval = setInterval(incrementUvod, 1000);
+							function incrementUvod(){
+   								 i1 = i1 + 1;
+ 							   document.getElementById("trajanje").innerHTML = "Proveo si " + i1 + " sekundi/u na sajtu";
+							}
+
+						var kolikojesati = setInterval(function(){ myTimer() }, 1000);
+
+						function myTimer() {
+						    var d = new Date();
+						    var t = d.toLocaleTimeString();
+						    document.getElementById("kolikojesati").innerHTML = t;
+						}
+					</script>
+		
+				</div>
+				<div id="Home">
+					<div id="Home_levo">
+						<h1>Pozdrav!</h1>
+						<p>Izaberi Tool:<br>
+						(slike)(svih)</p>
+					</div>
+					<div id="Home_desno">
+						<h3>Tvoji podaci kazu:</h3>
+						<p id="Home_TvojiPodaci"></p>
+					</div>
+				</div>
+
+				<div id="Calculator">
+					<table align="center">
+					<tr>
+						<td style="text-align: center" colspan=5"" width="100%">
+							<input style="display:inline-block" type="radio" class="virtualButtons" id="virtualRadio1" name="virtualRadios" onchange="changeVirtual1()"><input style="display:inline-block" type="number" id= "prvibroj" placeholder="Prvi broj (x)">
+							<p style="display:inline-block" id="znak"><b></b></p>
+							<input style="display:inline-block" type="radio" class="virtualButtons" id="virtualRadio2" name="virtualRadios" onchange="changeVirtual2()"><input style="display:inline-block" type="number" id= "drugibroj" placeholder= "Drugi broj (y)">
+							<p style="display:inline-block" id="znakjednako"><b>=</b></p>
+							<input style="display:inline-block" type="text" id="rezultat" onhover="" placeholder= "Ja znam sve" readonly>
+							<p id="prezultat"></p>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-right: 1px solid white; border-left: 1px solid white">
+							<input type="button" id="sabiranje" class="button1" value="Sabiranje" onclick="saberi()">
+							<input type="button" id="oduzimanje" class="button1" value="Oduzimanje" onclick="oduzmi()">
+							<br>
+							<input type="button" id="množenje" class="button1" value="Mnozenje" onclick="pomnozi()">
+							<input type="button" id="deljenje" class="button1" value="Deljenje" onclick="podeli()">
+						</td>
+						<td style="border-right: 1px solid white">
+							<input type="button" id="koren" class="button2" value="Koren od X" onclick="koren()">
+							<input type="button" id="power" class="button2" value="X na stepen Y" onclick="stepen()">
+							<br>
+							<input type="button" id="abs" class="button2" value="X apsolutno" onclick="abs()">
+							<input type="button" id="PI" class="button2" value="X = Pi" onclick="PI()">
+							<input type="button" id="kvadrat" class="button2" value="Kvadrat od X" onclick="kvadrat()">
+						</td>
+						<td style="border-right: 1px solid white">
+							<input type="button" id="sin" class="buttonTrig" value="Sin(x)" onclick="sin()">
+							<br>
+							<input type="button" id="cos" class="buttonTrig" value="Cos(x)" onclick="cos()">
+							<br>
+							<input type="button" id="tan" class="buttonTrig" value="Tan(x)" onclick="tan()">
+						</td>
+						<td>
+							<input type="button" id="rand10" class="buttonRand" value="Random (1, 10)" onclick="rand10()">
+							<br>
+							<input type="button" id="rand100" class="buttonRand" value="Random (1, 100)" onclick="rand100()">
+							<br>
+							<input type="button" id="randxy" class="buttonRand" value="Random (x, y)" onclick="randxy(prvibroj, drugibroj)">
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center" colspan="3">
+							<input type="button" id="Calc_Izracunaj" value="Izracunaj" onclick="izracunaj(prvibroj.value, drugibroj.value)">
+							<br>
+							<input type="button" id="Zokruglo" class="button3" value="Zaokrugli" onclick="Zokruglo()">
+							<input type="button" id="Clear" class="button3" value="Ponisti vrednosti" onclick="c()">
+						</td>
+						<td>
+							 <div class="virtualButtons" id="virtualButtons">
+			  					<input type="button" id="number1" class="buttonVirtual" onclick="addnumber('1')" value="1">
+			    				<input type="button" id="number2" class="buttonVirtual" onclick="addnumber('2')" value="2">
+			    				<input type="button" id="number3" class="buttonVirtual" onclick="addnumber('3')" value="3">
+			    				<br>
+			    				<input type="button" id="number4" class="buttonVirtual" onclick="addnumber('4')" value="4">
+			    				<input type="button" id="number5" class="buttonVirtual" onclick="addnumber('5')" value="5">
+			    				<input type="button" id="number6" class="buttonVirtual" onclick="addnumber('6')" value="6">
+			    				<br>
+			    				<input type="button" id="number7" class="buttonVirtual" onclick="addnumber('7')" value="7">
+			    				<input type="button" id="number8" class="buttonVirtual" onclick="addnumber('8')" value="8">
+			    				<input type="button" id="number9" class="buttonVirtual" onclick="addnumber('9')" value="9">
+			    				<br>
+			    				<input type="button" id="clear" class="buttonVirtual" onclick="clearr()" value="Clear ">
+			    				<input type="button" id="number0" class="buttonVirtual" onclick="addnumber('0')" value="0">
+			  				</div>
+						</td>
+					</tr>
+					</table>
+				</div>
+				<div id="Pomodoro">
+					<p id="PomOutput" class="output">00:00</p>
+					<input type="button" id="Pom25" class="buttonPom" value="Novi Pomodoro" onclick="Pom25()">
+					<input type="button" id="Pom5" class="buttonPom" value="Kratka pauza" onclick="Pom5()">
+					<input type="button" id="Pom15" class="buttonPom" value="Duga pauza" onclick="Pom15()">
+					<p id="PomObjasnjenjeText"> / </p>
+					<input type="button" id="PomObjasnjenje" class="buttonPom" value="Nauka iza ?" onclick="PomObjasnjenje()">
+					<input type="button" id="PomReset" class="buttonPom" value="Resetuj" onclick="PomResett()">
+				</div>
+				<div id="To-Do">
+					<h2 id="todoname">Moja To-Do lista:</h2>
+
+					<div id="todolevo" class="header">
+					<input type="text" id="myInput" placeholder="Naziv...">
+					<input type="button" id="todonewElement" class="buttontodo" value="Dodaj" onclick="todonewElement()">
+
+					<ul id="myUL">
+					  
+					</ul>
+
+					</div>
+
+					<div id="tododesno">
+						<p class="checktext" id="titlearhiva">Arhiva:</p>
+							<ul id="arhiva">
+
+							</ul>
+						<input type="button" class="buttontodo" value="Izbrisi arhivu" onclick="cleararc()">
+					</div>
+					<div style="clear: both;"><br><hr></div>
+					<div id="todosettings">
+						
+						<p class="checktext">Ukljuci arhiviranje: </p><input type="checkbox" id="arhiviranje" checked>
+						<br>
+						<input type="text" id="todonameinput1" placeholder="Ovde upisi ime liste...">
+						<input type="button" id="todonameinput2" class="buttontodo" value="Potvrdi" onclick="todonamechange2()">
+						<br>
+						<br>
+						<input type="button" id="todonamechange" class="buttontodo" value="Promeni ime liste" onclick="todonamechange1()">
+					</div>
+				</div>
+
+				<div id="Stoperica">
+					<p id="output" class="output">0:00:00:0</p>
+					<button id="StopericastartPause" onclick="StopericastartPause()">Start</button>
+					<button id="StopericaZastava" onclick="StopericaZastava()">Zastava</button>
+					<button id="StopericaReset" onclick="StopericaReset()">Reset</button>
+					<button id="StopericaMove" onclick="StopericaMove()">Premesti desno</button>
+					<br>
+					<br>
+					<button id="Stoperica+" onclick="Stoperica_Povecaj()">+</button>
+					<button id="Stoperica-" onclick="Stoperica_NormalSize()">Normal</button>
+					<button id="Stoperica-" onclick="Stoperica_Smanji()">-</button>
+					<ol id = "StopericaZastave">
+
+					</ol>
+				</div>
+				<div id="Random">
+				<br>
+					<div id="Random1x2x3x">
+					<p class="RNDradialContent">Random Alati: </p><input type="radio" class="radio3" id="RandomRadio1" name="RandomRadio" onchange="RandomRadio1()">
+					<p class="RNDradialContent">Generisi brojeve: </p><input type="radio" class="radio3" id="RandomRadio2" name="RandomRadio" onchange="RandomRadio2()">
+					<p class="RNDradialContent">Pogodi broj: </p><input type="radio" class="radio3" id="RandomRadio3" name="RandomRadio" onchange="RandomRadio3()">
+					<p class="RNDradialContent">Saberi ako mozes: </p><input type="radio" class="radio3" id="RandomRadio4" name="RandomRadio" onchange="RandomRadio4()">
+					<p class="RNDradialContent">Glavni gradovi: </p><input type="radio" class="radio3" id="RandomRadio5" name="RandomRadio" onchange="RandomRadio5()">
+					</div>
+					<br>
+					<div id="Random1x">
+						<div id= "Random1x_Levo">
+							
+							<input type="button" id="RandomKockica" class="buttonRandom" value="Drustvena kockica" onclick="RandomKockica()">
+							<input type="button" id="RandomNovcic" class="buttonRandom" value="Baci novcic" onclick="RandomNovcic()">
+							<input type="button" id="RandomBoja" class="buttonRandom" value="Random boja" onclick="RandomBoja()">
+							
+						</div>
+						<div id= "Random1x_Desno">
+							
+							<span id="Random1x_Close1"></span>
+							<div id="RandomKockicaDiv">
+								<SELECT id="Random1x_Br_Kock">
+								<OPTION> 1 </OPTION>
+								<OPTION> 2 </OPTION>
+								<OPTION> 3 </OPTION>
+								<OPTION> 4 </OPTION>
+								<OPTION> 5 </OPTION>
+								</SELECT>
+								<img id="RandomKockicaSlika" src="">
+								<img id="RandomKockicaSlika2" src="">
+								<img id="RandomKockicaSlika3" src="">
+								<img id="RandomKockicaSlika4" src="">
+								<img id="RandomKockicaSlika5" src="">
+							</div>
+							<div id="RandomNovcicDiv">
+								<img id="RandomNovcicSlika" src="">
+							</div>
+							<div id="RandomBojaDiv" onmouseover="RandomBoja()">
+								<p id="RandomBoja_brojke">////</p>
+							</div>
+							
+						</div>
+					</div>
+
+					<div id="Random2x">
+						<input type="text" id="rešenje" placeholder= "" readonly>
+						<input type="button" id="Random10" class="buttonRandom" value="Random (1, 10)" onclick="Random10()">
+						<input type="button" id="Random100" class="buttonRandom" value="Random (1, 100)" onclick="Random100()">
+						<input type="button" id="RandomNiz10" class="buttonRandom" value="Niz od 10" disabled onclick="RandomNiz10()">
+					</div>
+
+					<div id="Random3x">
+						<input type="button" id="Random3xInfo" class="buttonRandom" value="Objasnjenje" onclick="Random3xInfo()">
+						<input type="button" id="Random3xPromena" class="buttonRandom" value="Opcije" onclick="Random3xOpcije()">
+						<div id="Random3xOpcije">
+							<p class="Rndinfo">Ovde upisi broj n; Nas random broj ce se kretati u intervalu (0 - n):</p>
+							<input type="number" id="Random3xPromenaUser">
+							<input type="button" value="Ok" id="Random3xPromenaPotvrdi" class="buttonRandom" onclick="Random3xPromena()">
+						</div>
+						<p id="Random3xInfoP" class="Rndinfo"> Mi izaberemo broj od 1 do 10k, ti upises broj u input, mi ti kazemo vece ili manje od naseg broja, pokusaj da nadjes nas broj u sto manje koraka :) </p>
+
+						<p id="Random3x(x-y)" class="info"> Upisi broj od 1 do 10k:</p><input type="number" id="Random3xNumber" size="3">
+						<input type="button" id="Random3xPotvrdi" class="buttonRandom" value="Potvrdi" onclick="Random3x()">
+						<p id="Random3xVoditelj" class="Rndinfo"></p>
+						<p id="Random3xPokusaji" class="Rndinfo"></p>
+					</div>
+
+					<div id="Random4x">
+						<input type="button" id="RandomSabiranje" class="buttonRandom" value="Saberi ako mozes!" onclick="RandomSabiranje()">
+						<div id = "Random1xSabiranje"> 
+							<p id="Random1xSabiranjeVodic" class="Random4xTEXT"></p>
+							<p id="Random1xSabiranjeVreme" class="Random4xTEXT"></p>
+							<p id="RandomSabiranjeBrojevi" class="Random4xTEXT"></p>
+							<input type="number" id="RandomSabiranjeUpisivanje" placeholder= "Upisi resenje ovde..." maxlength="4">
+							<input type="button" id="RandomSabiranjeCheck" class="buttonRandom" value="Proveri" onclick="RandomSabiranjeCheck()">
+							<p id="Random1xSabiranjePoeniP" class="Random4xTEXT"></p>
+							<input type="button" id="RandomSabiranjeReset" class="buttonRandom" value="Dosta je bilo" onclick="RandomSabiranjeReset()">
+						</div>
+					</div>
+
+					<div id="Random5x">
+						<div id="Random5x_levo">
+							<input type="button" class="buttonRandom" id="GGPocetak" value="Pocni" onclick="GGPocetak()">
+							<div id="GGIzbor" class="GGtext">
+							Evropa: <input type="checkbox" id="Evropa" value="Evropa" onchange="()">
+							Azija: <input type="checkbox" id="Azija" value="Azija" onchange="()">
+							Afrika: <input type="checkbox" id="Afrika" value="Afrika" onchange="()">
+							Latinska Amerika: <input type="checkbox" id="L_Amerika" value="Latinska Amerika" onchange="()">
+							Angloamerika: <input type="checkbox" id="A_Amerika" value="Angloamerika" onchange="()">
+							</div>
+							<br>
+							<div id="Random5xSrednjiContent">
+							<input type="button" class="buttonRandom" id="GGIzaberi" value="To me pitaj!" onclick="GGIzaberi()">
+							<input type="button" class="buttonRandom" id="GGIzvuci" value="Izvuci drzavu" onclick="GGIzvuci()">
+							<p id="GGdemo" class="GGtext"></p>
+							<input type="text" align="middle" id="GGInput"><input type="button" class="buttonRandom" id="GGProveri" value="Proveri" onclick="GGProveri1()">
+							<p id="vodicGG" class="GGtext"></p>
+							</div>
+						</div>
+						<div id="Random5x_desno">
+							<input type="button" class="buttonRandom" disabled id="GGchange" value="Izaberi druge kontinente" onclick="GGchange()">
+							<input type="button" class="buttonRandom" id="GGbuttonPretragaDiv" value="Pretraga" onclick="GGOtvoriPretragu()">
+							<div id="GGPretragaDiv">
+							    <p class="GGtext">Napisi drzavu:</p>
+							    <input type="text" id="GGPretraga"> 
+							    <input type="button" class="buttonRandom" id="GGPretrazi" onclick="GGPretraga()" value="Pronadji glavni grad">
+							    <p id="GlavniGrad" class="GGtext"></p>
+							</div>
+							<input type="button" class="buttonRandom" id="GGsve" value="Pokazi sve" onclick="GGsve()">
+							<ol id="GGsve_lista" class="buildinfo"></ol>
+						</div>
+					</div>
+
+				</div>
+				<div id="Boje">
+					<table align="center">
+						<tr>
+							<td>
+								<p class="buildinfo">Red: </p><input type="range" id="redslider" min="0" max="255" oninput="changeBoje_jasemenjam_RGB()" onchange="changeBoje_jasemenjam_RGB()">
+								<p class="buildinfo">Green: </p><input type="range" id="greenslider" min="0" max="255" oninput="changeBoje_jasemenjam_RGB()" onchange="changeBoje_jasemenjam_RGB()">
+								<p class="buildinfo">Blue: </p><input type="range" id="blueslider" min="0" max="255" oninput="changeBoje_jasemenjam_RGB()" onchange="changeBoje_jasemenjam_RGB()">
+							</td>
+							<td>
+								<p class="buildinfo">Hue: </p><input type="range" id="hueslider" min="0" max="360" oninput="changeBoje_jasemenjam_HSL()" onchange="changeBoje_jasemenjam_HSL()">
+								<p class="buildinfo">Saturation: </p><input type="range" id="saturationslider" min="0" max="100" oninput="changeBoje_jasemenjam_HSL()" onchange="changeBoje_jasemenjam_HSL()">
+								<p class="buildinfo">Light: </p><input type="range" id="lightslider" min="0" max="100" oninput="changeBoje_jasemenjam_HSL()" onchange="changeBoje_jasemenjam_HSL()">
+							</td>
+							<td style="text-align:center; border-right:1px solid white">
+								<p class="buildinfo">Upisi HEX: </p><input type="text" id="boje_hex" size="3" oninput="changeBoje_jasemenjam_HEX()" onchange="changeBoje_jasemenjam_HEX()">
+							</td>
+							<td style="text-align:center" width="10px">
+								
+							</td>
+							<td>
+								<p class="buildinfo">RGB:</p><input type="text" id="boje_converter_rgb_r" size="2" oninput="boje_converter()">
+								<input type="text" id="boje_converter_rgb_g" size="2" oninput="boje_converter()">
+								<input type="text" id="boje_converter_rgb_b" size="2" oninput="boje_converter()">
+								<p class="buildinfo">HSL:</p><input type="text" disabled id="boje_converter_hsl" size="14" oninput="boje_converter()">
+								<p class="buildinfo">HEX:</p><p class="buildinfo" style="display:inline-block; text-decoration: bold">#</p><input type="text" id="boje_converter_hex" size="5" oninput="boje_converter()">
+							</td>
+							<td style="text-align:center" width="100px">
+								
+							</td>
+							<td id="boje_converter_testboja" style="text-align:center" width="100px">
+								
+							</td>
+						</tr>
+						<tr>
+							<div id="Boje_jasemenjam">
+								<h1 id="Boje_jasemenjam_h1"></h1>
+							</div>
+						</tr>
+						<tr>
+							<td><input type="button" value="RandomBoja" onclick="RandomRadio1(), RandomBoja()"></td>
+							<td><p class="buildinfo">Pravi gradient: </p><input type="checkbox" id="Boje_gradient" disabled></td>
+						</tr>
+					</table>
+				</div>
+   			</div>
+  			<div id="column-right"><p class="column">CheckBoxes(Control Panel)</p>
+
+  				<p class="mikac_inc"><b>mikac_inc</b></p>
+
+  				<div id="CP_kategorije">
+  				<input type="button" id="changeBackground_Otvori" value="Tema sajta" onclick="changeBackground_Otvori()">
+  				<input type="button" id="changeUvod_Otvori" value="Uvod" onclick="changeUvod_Otvori()">
+  				<br>
+  				<input type="button" id="changeCalc_Otvori" value="Kalkulator" onclick="changeCalc_Otvori()">
+  				<input type="button" id="changeToDo_Otvori" value="To-Do" onclick="changeToDo_Otvori()">
+  				<br>
+  				<input type="button" id="changeOstalo_Otvori" value="Ostalo" onclick="changeOstalo_Otvori()">
+  				<input type="button" id="changeExperiments_Otvori" value="Experiments" onclick="changeExperiments_Otvori()">
+  				</div>
+  				<div id="changeBackground">
+  					<p class="buildinfo">Promeni boju + smer gradienta pozadine:</p>
+  					<input type="color" id="changeBackground_prvaboja" size="1">
+	  				<SELECT id="changeBackground_smer">
+						<OPTION> to right </OPTION>
+						<OPTION> to left </OPTION>
+						<OPTION> to top </OPTION>
+						<OPTION> to bottom </OPTION>
+						<OPTION> to top left</OPTION>
+						<OPTION> to top right</OPTION>
+						<OPTION> to bottom left</OPTION>
+						<OPTION> to bottom right</OPTION>
+					</SELECT>
+	  				<input type="color" id="changeBackground_drugaboja" size="1">
+	  				<input type="button" id="changeBackground_potvrdi" value="Potvrdi" onclick="changeBackground()">
+	  				<p class="buildinfo">Ili samo solid color?</p><input type="color" id="izabranaboja" onchange="solidbackgroundcolor()">
+	  				<hr>
+	  				<p class="buildinfo">Promeni boju naglaska: </p>
+	  				<hr>
+  				</div>
+  				
+  				<div id="changeUvod">
+	  				<p class="checktext">Ukloni sav info iz uvoda:</p> <input type="checkbox" class="checkbox1" id="checkInfo" name="checkbox2" onchange="checkInfo1()">
+	  				<br>
+	  				<p class="checktext">Prikazi datum:</p> <input type="checkbox" class="checkbox1" checked id="checkUvod_datum" name="checkbox2" onchange="checkUvod_datum()">
+	  				<br>
+	  				<p class="checktext">Prikazi vreme:</p> <input type="checkbox" class="checkbox1" checked id="checkUvod_vreme" name="checkbox2" onchange="checkUvod_vreme()">
+	  				<br>
+	  				<p class="checktext">Prikazi trajanje sesije:</p> <input type="checkbox" class="checkbox1" checked id="checkUvod_trajanje" name="checkbox2" onchange="checkUvod_trajanje()">
+  				</div>
+  				<br>
+  				
+  				<div id="changeCalc">
+  					<p class="checktext" id="checkVirtual2">Koristi virtuelne brojeve:</p> <input type="checkbox" class="checkbox1" id="checkVirtual" name="checkbox4" onchange="checkVirtual()">
+  					<br>
+  				</div>
+  				<br>
+  				<div id="changeToDo">
+  					<p class="checktext" id="checkToDo_settings">Prikazi podesavanja u Contentu:</p> <input type="checkbox" class="checkbox1" id="checkToDo" checked name="checkboxToDo" onchange="checkToDo_settings()">
+  					<br>
+  				</div>
+  				<div id="changeOstalo">
+  					<div id="changeSettings">
+		  				<p class="checktext">Ne prikazuj imena kolona:</p> <input type="checkbox" class="checkbox1" id="checkColumn" name="checkbox1" onchange="checkColumn()">
+		  				<br>
+		  				<p class="checktext">Ne prikazuj pomerajuca slova:</p> <input type="checkbox" class="checkbox1" id="checkMarquee" name="checkbox3" onchange="checkMarquee()">
+	  				</div>
+  				</div>
+  				<div id="changeExperiments">
+  					<br>
+  					<p class="buildinfo">experiments:</p>
+  					<p class="buildinfo">(refresh to exit)</p>
+  					<input type="button" id="alltools" class="" onclick="alltools()" value="All Tools Mode!!!">
+  					<br>
+  					<input type="button" id="margins" class="" onclick="bodyfitme()" value="bodyfitme">
+  					<br>
+  					<input type="button" id="borders" class="" onclick="allborders()" value="i want limit">
+  				</div>
+
+  				<p id="StopericaMoved"></p>
+
+  			</div>
+
+
+		</div>
+		<div id="BuildInfoDiv">
+			<br>
+			<br>
+			<br>
+			<hr>
+			<table>
+				<tr>
+					<input type="button" id="BuildInfo" class="buttonInfo" onclick="BuildInfo11()" value="Sta je novo?">
+				</tr>
+				<tr>
+					<div id="BuildInfoButtons">
+						<br>
+						<input type="button" id="BuildInfo04000" class="buttonInfo" onclick="BuildInfo04000()" value="Build 0.4.000">
+						<input type="button" id="BuildInfo03000" class="buttonInfo" onclick="BuildInfo03000()" value="Build 0.3.000">
+					</div>
+				</tr>
+				<tr>
+					<td>
+						<ul id="BuildInfoList04000" class="buildinfo">
+							<li>Novi UI za (kalkulator + BuildInfo) - 0.3.046/0.3.047</li>
+							<li>(New) Boje / Content - 0.3.039/0.3.045</li>
+							<li>(New) bodyfitme + i want limit - 0.3.038</li>
+							<li>Improvements in Control Panel + all over the site - 0.3.037</li>
+							<li>(New) Boje  ++ Improvements in Control Panel - 0.3.036</li>
+							<li>(Minor) Glavni Gradovi/Pokazi sve - povratna funkcija - 0.3.035</li>
+							<li>(New) Random operacije/Random Alati/Random Boja  - 0.3.034</li>
+							<li>(Bugfix) Glavni gradovi  - 0.3.033</li>
+							<li>(Control Panel) To-Do settings - 0.3.032</li>
+							<li>(Opcija) Prikazi sve drzave i gl. gradove - 0.3.031</li>
+							<li>(New) Control Panel - 0.3.025/0.3.030</li>
+							<li>(New)(Beta) - All Tools Mode - 0.3.024</li>
+							<li>(Minor)CodeChanges - 0.3.023</li>
+							<li>(Bugfix) "Saberi ako mozes" + "To-Do" - 0.3.022</li>
+							<li>(Opcija) Povecaj/Smanji Output Stoperice - 0.3.021</li>
+							<li>Glavni gradovi / Fixes + Improvements - 0.3.011/0.3.020</li>
+							<li>(Project GG) - "Glavni gradovi" / Implementirani u Random operacije/Glavni grad - 0.3.006/0.3.010</li>
+							<li>Minor Bugfixes - 0.3.005</li>
+							<li>Veliki deo koda za "Glavne gradove" zavrsen (idalje nista vidljivo) - 0.3.003/0.3.004</li>
+							<li>Stoperica/Premesti desno - sada povratna funkcija ("Vrati nazad") - 0.3.002</li>
+							<li>Pregledniji Build Info kroz istoriju Update-a - 0.3.001</li>
+						</ul>
+					</td>
+					<td>
+						<br>
+						<ul id="BuildInfoList03000" class="buildinfo">
+							<li>Iz Alphe u BETU! - 0.3.000</li>
+							<li>(Sve 3 teme)CSS + JavaScript sada rade u simbiozi :) - 0.2.137/0.2.138</li>
+							<li>Bugfixes - 0.2.136</li>
+							<li>Bugfixes + Dodate nove opcije za "Pogodi broj" - 0.2.134/0.2.135</li>
+							<li>Zapocet rad na novoj podrazumevanoj temi za sajt (CSS) + Preimenovani Random Alati + Stoperica/ Premesti desno (Sada radi)- 0.2.133</li>
+							<li>Dodata mogucnost bacanja (1-5) drustvenih kockica, uređeni html i css fajlovi za Random / Osnovne - 0.2.132</li>
+							<li>Random operacije / Osnovne / "Baci novcic" + "Baci kockicu" (dodato) - 0.2.131</li>
+							<li>Random operacije / Osnovne / "Saberi ako mozes" (dodato) - 0.2.129/0.2.130</li>
+							<li>Pomodoro Timer je blizu zavrsetka izrade + CSS-u (groundwork) - 0.2.128</li>
+							<li>Poboljsan uvodni deo sajta; bolji format datuma + "Koliko je sati?" - 0.2.127</li>
+							<li>Sajt menja ime u Project: /NEON/</li>
+							<li>Dodata je Random Igra - "Pogodi broj"</li>
+							<li>Poboljsano je objasnjenje za igru</li>
+							<li>Dodata je mogucnost postavljanja zastavice(novog kruga) u stoperici</li>
+							<li>Dodat je Build Info van Div Container-a</li>
+							<li>Pomodoro dobija svoji deo Javascript-a</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="buildinfo"> Build / 0.3.046</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

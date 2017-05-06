@@ -1,0 +1,397 @@
+/* DIV kolone */
+
+#column-left{ float: left; width: 25%; }
+#column-right{ float: right; width: 25%; text-align: right; }
+#column-center{ display: inline-block; width: 50%; }
+
+/* Uvodni deo sajta */
+#uvod {
+	text-align: center;
+}
+
+#naslov{
+	text-align: center;
+	color: #00ff00;
+	font-family: Courier New;
+}
+
+#trajanje {
+	color: #00ff00;
+}
+
+
+/* Home div */
+
+#Home_levo {float: left; width: 50%;}
+#Home_desno {float: right; width: 50%;}
+
+
+/* Ostali elementi sajta */
+
+#marquee1{
+	color: #00ff00;
+}
+
+.column{
+	color: white;
+}
+
+.checktext{
+	color: white;
+	display: inline-block;
+	line-height: 1%;
+}
+
+.radialTema {
+	color: #00ff00;
+	display: inline-block;
+	line-height: 1px;
+}
+
+.radialContent {
+	color: white;
+	display: inline-block;
+	line-height: 0.01;
+}
+
+.info{
+	color: white;
+}
+
+.mikac_inc{
+	color: #00ff00;
+}
+
+body {
+	background-color: #000000;
+}
+
+#virtualRadio1{
+	display: inline-block;
+}
+
+
+#virtualRadio2{
+	visibility: hidden;
+}
+
+.virtualButtons {
+	visibility: hidden;
+}
+
+.buttonInfo:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+.buildinfo {
+	color: #00ff00;
+}
+
+/* Kalkulator */
+
+#Calculator {
+	display: none;
+}
+
+#znak{
+	color: #00ff00;
+}
+
+#znakjednako{
+	color: #00ff00;
+}
+
+#znakkosacrta{
+	color: #00ff00;
+}
+
+#upisivanje {
+
+}
+
+#rezultat {
+	border: none;
+    border-bottom: 2px solid red;
+    border-radius: 4px;
+    background-color: #00ff00;
+}
+
+.button1:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+
+.button2:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+.button3:hover {
+	background-color: black;
+	color: lightgreen;
+}
+
+.buttonTrig:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+.buttonRand:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+#abs:hover {
+
+}
+
+#Calc_Izracunaj {
+	font-size: 24px;
+	background-color: black;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    transition-duration: 0.4s;
+}
+
+#Calc_Izracunaj:hover {
+	font-size: 24px;
+	background-color: #00ff00;
+    color: black;
+    border: 2px solid white;
+}
+/* Štoperica */
+
+#Stoperica {
+	display: none;
+	text-align: center;
+}
+
+.Output {
+	color: #00ff00;
+	font-size: 24pt;
+}
+
+#StopericastartPause:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+#StopericaZastava:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+#StopericaReset:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+#StopericaMove:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+#StopericaZastave {
+	color: #00ff00;
+}
+
+#StopericaMoved {
+	font-family: courier new;
+	font-size: 18px;
+	color: #00ff00;
+}
+
+
+/* Random funkcije */
+
+#Random {
+	text-align: center;
+	display: none;
+}
+
+#Random1x2x3x {
+	background-color: black;
+}
+
+.RNDradialContent {
+	color: #00ff00;
+	display: inline-block;
+	line-height: 0.01;
+}
+
+.buttonRandom:hover {
+	color: black;
+	background-color: #00ff00;
+}
+
+#Random1x {
+	display: none;
+}
+
+#Random1x_Levo {float: left; width: 25%;}
+#Random1x_Desno {float: left; width: 75%;}
+
+#RandomSabiranjeBrojevi {
+	display: inline;
+}
+
+#Random1xSabiranje {
+	display: none;
+	text-align: center;
+	background-color: black;
+}
+
+#Random2x {
+	display: none;
+}
+
+#Random3x {
+	display: none;
+}
+
+#Random3xOpcije {
+	display: none;
+}
+
+.Rndinfo {
+	color: #00ff00;
+}
+
+#Random4x {
+	display: none;
+}
+
+
+#Random3xInfoP {
+	display: none;
+}
+
+#RandomKockicaDiv {
+	display: none;
+}
+
+#Random1x_Br_Kock {
+	display: inline-block;
+}
+
+.Random4xTEXT {
+	color: white;
+}
+
+#Random5x {
+	display: none;
+	text-align: center;
+}
+
+#GGIzbor {
+	display: none;
+}
+#GGIzvuci {
+	display: none;
+}
+#GGIzaberi {
+	display: none;
+}
+#GGInput {
+	display: none;
+}
+#GGProveri {
+	display: none;
+}
+#GGPretragaDiv {
+	display: none;
+}
+
+.GGtext {
+	color: #00ff00;
+}
+/*------>>> To- Do lista css */
+
+#todolevo {
+	float: left;
+	width: 50%;
+}
+
+#tododesno {
+	float: right;
+	width: 50%;
+
+}
+
+#todosettings {
+	clear: both;
+	text-align: center;
+	display: inline-block;
+}
+
+
+#To-Do {
+	display: none;
+	text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    color: red;
+}
+
+.buttontodo:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+.close:hover {
+    background-color: #00ff00;
+    color: black;
+}
+
+#todonameinput1{
+	display: none;
+	text-align: center;
+}
+
+#todonameinput2{
+	display: none;
+	text-align: center;
+}
+
+#todoname {
+	color: #00ff00;
+}
+
+#myUL {
+	color: #00ff00;
+	font-size: 20px;
+}
+
+#titlearhiva {
+	font-size: 20px;
+}
+#arhiva {
+	color: white;
+	font-size: 20px;
+	text-decoration: line-through;
+}
+
+/* Pomodoro */
+
+#Pomodoro {
+	display: none;
+	text-align: center;
+}
+
+#PomReset {
+	background-color: red;
+	color: white;
+}
+
+.buttonPom:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+#PomObjasnjenjeText {
+	color: white;
+}
