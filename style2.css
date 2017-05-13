@@ -193,7 +193,7 @@
 .default_input {
 	height: 18pt;
 	transition-duration: 0.4s;
-	color: var(--accent-color);
+	color: white;
 	background: black;
 	border: 2px solid var(--accent-color);
 }
