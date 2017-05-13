@@ -687,7 +687,7 @@ function Random3xPromena() {
 
 // Skripte za Project /GG/ - Glavni gradovi
 
-var svedrzave = {Albanija: "Tirana", Andora: "Andora", Austrija: "Bec", Belgija: "Brisel" , Belorusija: "Minsk", Bosna_i_Hercegovina: "Sarajevo", Bugarska: "Sofija", Vatikan: "Vatikan", Gruzija: "Tbilisi", Grcka: "Atina", Danska: "Kopenhagen", Estonija: "Talin", Irska: "Dablin", Island: "Rejkjavik", Italija: "Rim", Jermenija: "Jerevan", Kipar: "Nikozija", Letonija: "Riga", Litvanija: "Vilnjus", Lihtenstajn: "Vaduc", Luksemburg: "Luksemburg", Madjarska: "Budimpesta", Makedonija: "Skoplje", Malta: "Valeta", Moldavija: "Kisinjev", Monako: "Monako", Nemacka: "Berlin", Norveska: "Oslo", Poljska: "Varsava", Portugalija: "Lisabon", Rumunija: "Bukurest", Rusija: "Moskva", San_Marino: "San Marino", Slovacka: "Bratislava", Slovenija: "Ljubljana", Srbija: "Beograd", Turska: "Ankara", Engleska: "London", Ukrajna: "Kijev", Finska: "Helsinki", Francuska: "Pariz", Holandija: "Amsterdam", Hrvatska: "Zagreb", Crna_Gora: "Podgorica", Ceska: "Prag", Svajcerska: "Bern", Svedska: "Stokxolm", Spanija: "Madrid", Argentina: "Buenos Ajres", Bolivija: "La Paz", Brazil: "Brazilija", Venecuela: "Karakas", Gvajana: "Dzordztaun", Ekvador: "Kito", Kolumbija: "Bogota", Paragvaj: "Asunsion", Peru: "Lima", Surinam: "Paramaribo", Urugvaj: "Montevideo", Cile: "Santijago", Francuska_Gvajana: "Kajena", Belize: "Belmopan", Gvatemala: "Gvatemala", Dominikanska_Republika: "Santo Domingo", Salvador: "San Salvador", Kostarika: "San Hoze", Kuba: "Havana", Meksiko: "Meksiko Siti", Nikaragva: "Managva", Panama: "Panama", Haiti: "Port o Prens", Honduras: "Tegusigalpa", SAD: "Vasington", Kanada: "Otava", Avganistan: "Kabul", Azerbejdzan: "Baku", Banglades: "Daka", Bahrein: "Manama", Butan: "Timbu", Vijetnam: "Hanoj", Gruzija: "Tbilisi", Izreal: "Jerusalim", Indija: "Nju Delhi", Indonezija: "džakarta", Irak: "Bagdad", Iran: "Teheran", Istocni_Timor: "Dili", Japan: "Tokio", Jemen: "Sana", Jermenija: "Jerevan", Jordan: "Aman", "Juzna Koreja": "Seul", "Kazahstan": "Astana", Kambodza: "Pnom Pen", Katar: "Doha", Kina: "Peking", Kipar: "Nikozija", Kirgistan: "Biskek", Kuvajt: "Kuvajt", Laos: "Vijentijan", Liban: "Bejrut", Maldivi: "Male", Melezija: "Kuala Lumpur", Mjanmar: "Nejpjido", Mongolija: "Ulan Bator", Nepal: "Katmandu", Pakistan: "Islamabad", Oman: "Maskat", Rusija: "Moskva", Saudijska_Arabija: "Rijad", Severna_Koreja: "Pjongjang", Singapur: "Singapur", Sirija: "Damask", Tajland: "Bangkok", Tadzikistan: "Dusanbe", Turkmenistan: "Ashabad", Turska: "Ankara", Uzbekistan: "Taskent", Filipini: "Manila", Ujedinjeni_Arapski_Emirati: "Abu Dabi",Alzir: "Alzir", Angola: "Loanda", Benin: "Porto Novo", Bocvana: "Gaborone", Burkina_Faso: "Uagadugu", Borundi: "Budzumbura", Gabon: "Librvil", Gambija: "Bandzul", Gana: "Akra", Gvineja: "Konakri", Gvineja_Bisao: "Bisau", Egipat: "Kairo", Ekvatorijalna_Gvineja: "Malabo", Eritreja: "Asmara", Etiopija: "Adis Abeba", Zambija: "Lusaka", Zelenortska_Ostrva: "Praja", Zimbabve: "Harare", Juznoafricka_Republika: "Pretorija", Juzni_Sudan: "Dzuba", Kamerun: "Jaunde", Kenija: "Naerobi", Kongo: "Brazavil", DR_Kongo: "Kinsasa", Komori: "Moroni", Lesoto: "Maseru", Liberija: "Monrovija", Libija: "Tripoli", Madagaskar: "Antananarivo", Malavi: "Lilongve", Mali: "Bamako", Moroko: "Rabat", Mauritanija: "Nuaksot", Mauricijus: "Port Luis", Mozambik: "Maputo", Namibija: "Vindhuk", Nigerija: "Abudza", Niger: "Nijamej", Obala_Slonovace: "Jamasukro", Ruanda: "Kigali", Sijera_Leone: "fritaun", Senegal: "Dakar", Somalija: "Mogadisu", Sudan: "Kartun", Svazilend: "Mbabane", Tanzanija: "Dodoma", Togo: "Lome", Tunis: "Tunis", Uganda: "Kampala", Centralnoafricka_Republika: "Bangi", Cad: "Ndzamena", Dzibuti: "Dzibuti", Maroko: "Rabat" };
+var svedrzave = {Albanija: "Tirana", Andora: "Andora", Austrija: "Bec", Belgija: "Brisel" , Belorusija: "Minsk", Bosna_i_Hercegovina: "Sarajevo", Bugarska: "Sofija", Vatikan: "Vatikan", Gruzija: "Tbilisi", Grcka: "Atina", Danska: "Kopenhagen", Estonija: "Talin", Irska: "Dablin", Island: "Rejkjavik", Italija: "Rim", Jermenija: "Jerevan", Kipar: "Nikozija", Letonija: "Riga", Litvanija: "Vilnjus", Lihtenstajn: "Vaduc", Luksemburg: "Luksemburg", Madjarska: "Budimpesta", Makedonija: "Skoplje", Malta: "Valeta", Moldavija: "Kisinjev", Monako: "Monako", Nemacka: "Berlin", Norveska: "Oslo", Poljska: "Varsava", Portugalija: "Lisabon", Rumunija: "Bukurest", Rusija: "Moskva", San_Marino: "San Marino", Slovacka: "Bratislava", Slovenija: "Ljubljana", Srbija: "Beograd", Turska: "Ankara", Engleska: "London", Ukrajna: "Kijev", Finska: "Helsinki", Francuska: "Pariz", Holandija: "Amsterdam", Hrvatska: "Zagreb", Crna_Gora: "Podgorica", Ceska: "Prag", Svajcerska: "Bern", Svedska: "Stokxolm", Spanija: "Madrid", Argentina: "Buenos Ajres", Bolivija: "La Paz", Brazil: "Brazilija", Venecuela: "Karakas", Gvajana: "Dzordztaun", Ekvador: "Kito", Kolumbija: "Bogota", Paragvaj: "Asunsion", Peru: "Lima", Surinam: "Paramaribo", Urugvaj: "Montevideo", Cile: "Santijago", Francuska_Gvajana: "Kajena", Belize: "Belmopan", Gvatemala: "Gvatemala", "Dominikanska Republika": "Santo Domingo", Salvador: "San Salvador", Kostarika: "San Hoze", Kuba: "Havana", Meksiko: "Meksiko Siti", Nikaragva: "Managva", Panama: "Panama", Haiti: "Port o Prens", Honduras: "Tegusigalpa", SAD: "Vasington", Kanada: "Otava", Avganistan: "Kabul", Azerbejdzan: "Baku", Banglades: "Daka", Bahrein: "Manama", Butan: "Timbu", Vijetnam: "Hanoj", Gruzija: "Tbilisi", Izreal: "Jerusalim", Indija: "Nju Delhi", Indonezija: "džakarta", Irak: "Bagdad", Iran: "Teheran", Istocni_Timor: "Dili", Japan: "Tokio", Jemen: "Sana", Jermenija: "Jerevan", Jordan: "Aman", "Juzna Koreja": "Seul", "Kazahstan": "Astana", Kambodza: "Pnom Pen", Katar: "Doha", Kina: "Peking", Kipar: "Nikozija", Kirgistan: "Biskek", Kuvajt: "Kuvajt", Laos: "Vijentijan", Liban: "Bejrut", Maldivi: "Male", Melezija: "Kuala Lumpur", Mjanmar: "Nejpjido", Mongolija: "Ulan Bator", Nepal: "Katmandu", Pakistan: "Islamabad", Oman: "Maskat", Rusija: "Moskva", Saudijska_Arabija: "Rijad", Severna_Koreja: "Pjongjang", Singapur: "Singapur", Sirija: "Damask", Tajland: "Bangkok", Tadzikistan: "Dusanbe", Turkmenistan: "Ashabad", Turska: "Ankara", Uzbekistan: "Taskent", Filipini: "Manila", Ujedinjeni_Arapski_Emirati: "Abu Dabi",Alzir: "Alzir", Angola: "Loanda", Benin: "Porto Novo", Bocvana: "Gaborone", Burkina_Faso: "Uagadugu", Borundi: "Budzumbura", Gabon: "Librvil", Gambija: "Bandzul", Gana: "Akra", Gvineja: "Konakri", Gvineja_Bisao: "Bisau", Egipat: "Kairo", Ekvatorijalna_Gvineja: "Malabo", Eritreja: "Asmara", Etiopija: "Adis Abeba", Zambija: "Lusaka", Zelenortska_Ostrva: "Praja", Zimbabve: "Harare", Juznoafricka_Republika: "Pretorija", Juzni_Sudan: "Dzuba", Kamerun: "Jaunde", Kenija: "Naerobi", Kongo: "Brazavil", DR_Kongo: "Kinsasa", Komori: "Moroni", Lesoto: "Maseru", Liberija: "Monrovija", Libija: "Tripoli", Madagaskar: "Antananarivo", Malavi: "Lilongve", Mali: "Bamako", Moroko: "Rabat", Mauritanija: "Nuaksot", Mauricijus: "Port Luis", Mozambik: "Maputo", Namibija: "Vindhuk", Nigerija: "Abudza", Niger: "Nijamej", Obala_Slonovace: "Jamasukro", Ruanda: "Kigali", Sijera_Leone: "fritaun", Senegal: "Dakar", Somalija: "Mogadisu", Sudan: "Kartun", Svazilend: "Mbabane", Tanzanija: "Dodoma", Togo: "Lome", Tunis: "Tunis", Uganda: "Kampala", Centralnoafricka_Republika: "Bangi", Cad: "Ndzamena", Dzibuti: "Dzibuti", Maroko: "Rabat" };
 
 var evropa = {Albanija: "Tirana", Andora: "Andora", Austrija: "Bec", Belgija: "Brisel" , Belorusija: "Minsk", Bosna_i_Hercegovina: "Sarajevo", Bugarska: "Sofija", Vatikan: "Vatikan", Gruzija: "Tbilisi", Grcka: "Atina", Danska: "Kopenhagen", Estonija: "Talin", Irska: "Dablin", Island: "Rejkjavik", Italija: "Rim", Jermenija: "Jerevan", Kipar: "Nikozija", Letonija: "Riga", Litvanija: "Vilnjus", Lihtenstajn: "Vaduc", Luksemburg: "Luksemburg", Madjarska: "Budimpesta", Makedonija: "Skoplje", Malta: "Valeta", Moldavija: "Kisinjev", Monako: "Monako", Nemacka: "Berlin", Norveska: "Oslo", Poljska: "Varsava", Portugalija: "Lisabon", Rumunija: "Bukurest", Rusija: "Moskva", San_Marino: "San Marino", Slovacka: "Bratislava", Slovenija: "Ljubljana", Srbija: "Beograd", Turska: "Ankara", Engleska: "London", Ukrajna: "Kijev", Finska: "Helsinki", Francuska: "Pariz", Holandija: "Amsterdam", Hrvatska: "Zagreb", Crna_Gora: "Podgorica", Ceska: "Prag", Svajcerska: "Bern", Svedska: "Stokxolm", Spanija: "Madrid"};
 var l_amerika = {Argentina: "Buenos Ajres", Bolivija: "La Paz", Brazil: "Brazilija", Venecuela: "Karakas", Gvajana: "Dzordztaun", Ekvador: "Kito", Kolumbija: "Bogota", Paragvaj: "Asunsion", Peru: "Lima", Surinam: "Paramaribo", Urugvaj: "Montevideo", Cile: "Santijago", Francuska_Gvajana: "Kajena", Belize: "Belmopan", Gvatemala: "Gvatemala", Dominikanska_Republika: "Santo Domingo", Salvador: "San Salvador", Kostarika: "San Hoze", Kuba: "Havana", Meksiko: "Meksiko Siti", Nikaragva: "Managva", Panama: "Panama", Haiti: "Port o Prens", Honduras: "Tegusigalpa"};
@@ -1323,11 +1323,11 @@ var changeBackground_Otvori_varijabla = 0;
 function changeBackground_Otvori(){
 	if(changeBackground_Otvori_varijabla == 0){
 		document.getElementById("changeBackground").style.display = "block";
-		document.getElementById("changeBackground_Otvori").value = "(boje)X";
+		document.getElementById("changeBackground_Otvori").value = "(tema sajta)X";
 		changeBackground_Otvori_varijabla += 1;
 	} else {
 		document.getElementById("changeBackground").style.display = "none";
-		document.getElementById("changeBackground_Otvori").value = "Boje";
+		document.getElementById("changeBackground_Otvori").value = "Tema sajta";
 		changeBackground_Otvori_varijabla -= 1;
 	}
 	
@@ -1343,6 +1343,28 @@ function changeBackground() {
 	var bckgr1 = document.getElementById("changeBackground_prvaboja").value
 	var bckgr2 = document.getElementById("changeBackground_drugaboja").value
 	document.body.style.background = 'linear-gradient(' + bckgrsmer + ', ' + bckgr1 + ', ' + bckgr2 + ')';
+	document.getElementById("CP_kategorije").style.backgroundColor = bckgr2;
+	document.getElementById("CP_kategorije").style.border = "solid" + bckgr1;
+	document.getElementById("changeContent").style.backgroundColor = bckgr1;
+	document.getElementById("changeContent").style.border = "solid" + bckgr2;
+}
+//accentColor
+function changeAccent() {
+	var accentColor = document.getElementById("changeAccent").value
+	var accentClass = document.getElementsByClassName("accent")
+	for (d=0; d<accentClass.length; d++) {
+		accentClass[d].style.color = accentColor;
+	}
+	var importantClass = document.getElementsByClassName("important")
+	for (g=0; g<importantClass.length; g++) {
+		importantClass[g].style.setProperty("--accent-color", accentColor);
+	}
+	var default_inputClass = document.getElementsByClassName("default_input")
+	for (g=0; g<default_inputClass.length; g++) {
+		default_inputClass[g].style.setProperty("--accent-color", accentColor);
+	}
+	$(':root').css("--accent-color", accentColor)
+	
 }
 
 // ChangeUvod
@@ -1414,9 +1436,9 @@ function changeToDo_Otvori(){
 
 function checkToDo_settings() {
 	if(document.getElementById("checkToDo_settings").checked){
-		document.getElementById("todosettings").style.display = "block";
+		document.getElementById("todosettings").style.display = "block"
 	} else {
-		document.getElementById("todosettings").style.display = "none";
+		document.getElementById("todosettings").style.display = "none"
 	}
 }
 
