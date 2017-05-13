@@ -1,3 +1,7 @@
+:root {
+    --accent-color: black;
+}
+
 /* DIV kolone */
 
 #column-left{ float: left; width: 25%; }
@@ -11,15 +15,234 @@
 
 #naslov{
 	text-align: center;
-	color: #000000;
+	color: black;
 	font-family: Courier New;
 }
 
 #trajanje {
-	color: #000000;
+	color: black;
 }
 
+/* -------Nove klase */
+/* text */
+.accent {
+	color: black;
+	text-decoration: bold;
+	transition-duration: 1s;
+	font-family: courier new;
+}
+
+.default {
+	color: black;
+}
+/* buttons */
+
+.button_info {
+  background-color: #FFD700;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button_info span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_info span:after {
+  content: '\1f6c8';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_info:hover span {
+  padding-right: 15px;
+}
+
+.button_info:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.important {
+	font-size: 17px;
+	background-color: var(--accent-color);
+	color: white;
+    border: 2px solid var(--accent-color);
+    transition-duration: 0.4s;
+}
+
+.important:hover {
+	font-size: 18px;
+	background-color: white;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+}
+
+.disabled {
+	cursor: not-allowed;
+}
+
+.button_grey{
+	font-size: 14px;
+	background-color: black;
+	color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+.button_grey:hover {
+	font-size: 14px;
+	background-color: grey;
+    color: white;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+
+.button_green {
+	font-size: 14px;
+	background-color: black;
+	color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+.button_green:hover {
+	font-size: 14px;
+	background-color: green;
+    color: white;
+    border: 2px solid green;
+    cursor: pointer;
+}
+
+.button_red {
+	font-size: 14px;
+	background-color: black;
+	color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+.button_red:hover {
+	font-size: 14px;
+	background-color: red;
+    color: white;
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+.button_blue {
+	font-size: 14px;
+	background-color: black;
+	color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+.button_blue:hover {
+	font-size: 14px;
+	background-color: blue;
+    color: white;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+.button_purple {
+	font-size: 14px;
+	background-color: black;
+	color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+.button_purple:hover {
+	font-size: 14px;
+	background-color: purple;
+    color: white;
+    border: 2px solid purple;
+    cursor: pointer;
+}
+
+.button_orange {
+	font-size: 14px;
+	background-color: black;
+	color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+.button_orange:hover {
+	font-size: 14px;
+	background-color: #ff4500;
+    color: white;
+    border: 2px solid #ff4500;
+    cursor: pointer;
+}
+
+/* input */
+.default_input {
+	height: 18pt;
+	transition-duration: 0.4s;
+	color: var(--accent-color);
+	background: black;
+	border: 2px solid var(--accent-color);
+}
+
+.default_input:focus {
+	--accent-color: #00ff00;
+	background: white;
+	color: black;
+	transition-duration: all 0.4s;
+}
+
+/* Control Panel */
+
+#CP_kategorije {
+	border: 1px solid var(--accent-color);
+	padding: 2%;
+	margin-left: 45%;
+}
+
+#changeBackground {
+	display: none;
+}
+
+#changeUvod {
+	display: none;
+}
+
+#changeCalc {
+	display: none;
+}
+
+#changeToDo {
+	display: none;
+}
+
+#changeOstalo {
+	display: none;
+}
+
+#changeExperiments {
+	display: none;
+}
+
+
 /* Home div */
+
+#Home {
+	display: none;
+}
 
 #Home_levo {float: left; width: 50%;}
 #Home_desno {float: right; width: 50%;}
@@ -28,7 +251,7 @@
 /* Ostali elementi sajta */
 
 #marquee1{
-	color: #000000;
+	color: black;
 }
 
 .column{
@@ -36,13 +259,13 @@
 }
 
 .checktext{
-	color: black;
+	color: white;
 	display: inline-block;
 	line-height: 1%;
 }
 
 .radialTema {
-	color: #000000;
+	color: black;
 	display: inline-block;
 	line-height: 1px;
 }
@@ -57,22 +280,9 @@
 	color: black;
 }
 
-.buttonInfo {
-	background-color: black;
-	color: white;
-}
-
-.buttonInfo:hover {
-	background-color: white;
-	color: black;
-}
-
-.mikac_inc{
-	color: #000000;
-}
-
 body {
-	background-color: white;
+	background: white;
+	transition-duration: 1s;
 }
 
 #virtualRadio1{
@@ -88,85 +298,51 @@ body {
 	visibility: hidden;
 }
 
-.buttonVirtual {
-	background-color: black;
-	color: white;
+.buttonInfo:hover {
+	background-color: #00ff00;
+	color: black;
+}
+
+.buildinfo {
+	color: #00ff00;
 }
 
 /* Kalkulator */
 
 #Calculator {
-	display: none;
+	display: block;
+    transition: opacity 1s ease-out;
+    opacity: 1; 
+}
+#Calculator.active {
+	display: block;
+    opacity: 1; 
 }
 
 #znak{
-	color: #000000;
+	font-size: 24px;
+	color: var(--accent-color);
 }
 
 #znakjednako{
-	color: #000000;
+	font-size: 24px;
+	color: var(--accent-color);
 }
 
 #znakkosacrta{
-	color: #000000;
-}
-
-#upisivanje {
-
+	color: var(--accent-color);
 }
 
 #rezultat {
 	border: none;
-    border-bottom: 2px solid red;
-    border-radius: 4px;
-    background-color: #ffffff;
-}
-
-.button1 {
-	background-color: #000000;
-	color: white;
-}
-
-
-.button2 {
-	background-color: #000000;
-	color: white;
-}
-
-.button3 {
-	background-color: black;
-	color: white;
-}
-
-.buttonTrig {
-	background-color: #000000;
-	color: white;
-}
-
-.buttonRand {
-	background-color: #000000;
-	color: white;
-}
-
-#abs:hover {
-
+    border-radius: 6px;
+    background-color: black;
+    border: 1px solid #00ff00;
 }
 
 #Calc_Izracunaj {
 	font-size: 24px;
-	background-color: black;
-    color: white;
-    border: 2px solid white;
-    transition-duration: 0.4s;
 }
-
-#Calc_Izracunaj:hover {
-	font-size: 24px;
-	background-color: white;
-    color: black;
-    border: 2px solid black;
-}
-
 /* Štoperica */
 
 #Stoperica {
@@ -174,35 +350,18 @@ body {
 	text-align: center;
 }
 
-.Output {
-	color: #000000;
-	font-size: 24pt;
+#output {
+	font-size: 28pt;
+	transition-duration: 0.4s;
 }
 
-#StopericastartPause {
-	background-color: #000000;
-	color: white;
-}
-
-#StopericaZastava {
-	background-color: #000000;
-	color: white;
-}
-
-#StopericaMove {
-	background-color: #000000;
-	color: white;
+#StopericaZastave {
+	color: var(--accent-color);
 }
 
 #StopericaMoved {
 	font-family: courier new;
 	font-size: 18px;
-	color: black;
-}
-
-#StopericaReset {
-	background-color: #000000;
-	color: white;
 }
 
 /* Random funkcije */
@@ -213,22 +372,17 @@ body {
 }
 
 #Random1x2x3x {
-	background-color: black;
+	background: linear-gradient(to left, black , transparent);
+}
+
+#Random1x {
+	display: none;
 }
 
 .RNDradialContent {
 	color: white;
 	display: inline-block;
 	line-height: 0.01;
-}
-
-.buttonRandom {
-	color: white;
-	background-color: black;
-}
-
-#Random1x {
-	display: none;
 }
 
 #Random1x_Levo {float: left; width: 25%;}
@@ -238,12 +392,9 @@ body {
 	display: inline;
 }
 
-
-
 #Random1xSabiranje {
 	display: none;
 	text-align: center;
-	background-color: white;
 }
 
 #Random2x {
@@ -258,14 +409,9 @@ body {
 	display: none;
 }
 
-.Rndinfo {
-	color: black;
-}
-
 #Random4x {
 	display: none;
 }
-
 
 #Random3xInfoP {
 	display: none;
@@ -284,29 +430,39 @@ body {
 	text-align: center;
 }
 
+#Random5x_levo {float: left; width: 75%;}
+#Random5x_desno {float: right; width: 25%;}
+
+#Random5xSrednjiContent {
+	text-align: center;
+}
+
 #GGIzbor {
 	display: none;
+	color: black;
 }
 #GGIzvuci {
 	display: none;
+	text-align: center;
 }
 #GGIzaberi {
 	display: none;
+	text-align: center;
 }
 #GGInput {
 	display: none;
+	text-align: center;
+	float: inline;
 }
 #GGProveri {
 	display: none;
+	text-align: center;
+	float: inline;
 }
 #GGPretragaDiv {
 	display: none;
+	text-align: center;
 }
-
-.GGtext {
-	color: black;
-}
-
 /*------>>> To- Do lista css */
 
 #todolevo {
@@ -317,15 +473,17 @@ body {
 #tododesno {
 	float: right;
 	width: 50%;
-
 }
 
 #todosettings {
-	clear: both;
+	text-align: center;
+	display: block;
+}
+
+#todonameinput2 {
 	text-align: center;
 	display: inline-block;
 }
-
 
 #To-Do {
 	display: none;
@@ -334,17 +492,12 @@ body {
 
 .close {
     cursor: pointer;
-    color: red;
-}
-
-.buttontodo {
-	background-color: #000000;
-	color: white;
+    color: white;
 }
 
 .close:hover {
-    background-color: #000000;
-    color: red;
+    background-color: #f44336;
+    color: white;
 }
 
 #todonameinput1{
@@ -357,12 +510,8 @@ body {
 	text-align: center;
 }
 
-#todoname {
-	color: #000000;
-}
-
 #myUL {
-	color: #000000;
+	transition-duration: all 0.5s;
 	font-size: 20px;
 }
 
@@ -371,8 +520,7 @@ body {
 }
 
 #arhiva {
-	color: black;
-	font-size: 20px;
+	font-size: 16px;
 	text-decoration: line-through;
 }
 
@@ -383,16 +531,12 @@ body {
 	text-align: center;
 }
 
-#PomReset {
-	background-color: black;
-	color: red;
+#PomOutput {
+	font-size: 28pt;
 }
 
-.buttonPom {
-	background-color: black;
-	color: white;
-}
+/* Bojeee */
 
-#PomObjasnjenjeText {
-	color: black;
+#Boje {
+	display: none;
 }
