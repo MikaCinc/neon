@@ -1,20 +1,23 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<link id="pagestyle" rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 		<title>Project: //NEON/</title>
 	</head>
-	<body>
+	<body id="Body">
 		<div id="container" style="display: block">
-			<p id="marquee1" class="accent"><b><marquee>//Multifunkcionalan sajt/ Project: //NEON/ / BETA verzija sajta(0.3.000); U verziji 0.4.000 - Control Panel + "Glavni gradovi" + Expriments; Autor: Mihajlo Marjanovic; RAF Challenge 2017; GSM Nis; JS(REACT), HTML, CSS//</marquee></b></p>
+			<p id="marquee1" class="accent"><b><marquee>//Multifunkcionalan sajt/ Project: //NEON/ / BETA verzija sajta(0.4.000); Pogledaj Build Info na dnu sajta da vidiš šta je novo u verziji 0.4.000; Autor: Mihajlo Marjanović; RAF Challenge 2017; GSM Niš; JS(REACT), HTML, CSS//</marquee></b></p>
 			<div id="column-left"><p class="column">RadialButtons(Menjaj Content)</p>
 
 			<p class="accent"><b>mikac_inc</b></p>
 
 				<div id="changeContent">
-				<p class="radialContent">Home: </p><input type="radio" class="radio2" id="radioContent0" name="radioContent2" onchange="changeContent0()">
+				<p class="radialContent">Home: </p><input type="radio" checked class="radio2" id="radioContent0" name="radioContent2" onchange="changeContent0()">
 				<br>
-				<p class="radialContent">Kalkulator: </p><input type="radio" checked class="radio2" id="radioContent1" name="radioContent2" onchange="changeContent1()">
+				<p class="radialContent">Kalkulator: </p><input type="radio" class="radio2" id="radioContent1" name="radioContent2" onchange="changeContent1()">
 				<br>
 				<p class="radialContent">Stoperica: </p><input type="radio" class="radio2" id="radioContent2" name="radioContent2" onchange="changeContent2()">
 				<br>
@@ -44,39 +47,31 @@
    				<div id="uvod">
 					<h1 id="naslov" class="accent">Project: //NEON/</h1>
 					<p id="datum" class="info"></p>
-					<script>
-						var datum = new Date()
-						document.getElementById("datum").innerHTML = "Danasnji datum je: " + datum.toDateString();
-					</script>
-						<p id="trajanje" class="info"></p>
-						<p id="kolikojesati" class="info"></p>
-					<script>
-						var i1 = 0;
-						var interval = setInterval(incrementUvod, 1000);
-							function incrementUvod(){
-   								 i1 = i1 + 1;
- 							   document.getElementById("trajanje").innerHTML = "Proveo si " + i1 + " sekundi/u na sajtu";
-							}
-
-						var kolikojesati = setInterval(function(){ myTimer() }, 1000);
-
-						function myTimer() {
-						    var d = new Date();
-						    var t = d.toLocaleTimeString();
-						    document.getElementById("kolikojesati").innerHTML = t;
-						}
-					</script>
-		
+					<p id="trajanje" class="info">Proveo si: <span id="trajanjeSpan" class="accent"></span> sekundi/u/e na sajtu!</p>
+					<p id="kolikojesati" class="info"></p>
 				</div>
 				<div id="Home">
 					<div id="Home_levo">
-						<h1 class="default">Pozdrav!</h1>
-						<p class="default">Izaberi Tool:<br>
-						(slike)(svih)</p>
+						<h2 class="accent">Igre:<br></h2>
+						<p class="default" style="cursor: pointer" onclick="changeContent4(), RandomRadio3()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Pogodi broj</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent4(), RandomRadio4()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Saberi ako možeš</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent4(), RandomRadio5()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Glavni gradovi</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent4(), RandomRadio6()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Rock, Paper, Scissors</p>
+						<h2 class="accent">Alati:<br></h2>
+						<p class="default" style="cursor: pointer" onclick="changeContent1()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Kalkulator</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent2()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Štoperica</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent5()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Pomodoro Timer</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent3()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">To-Do lista</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent6()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Boje</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent4(), RandomRadio2()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Generiši brojeve</p>
+						<p class="default" style="cursor: pointer" onclick="changeContent4(), RandomRadio1()" onmouseover="this.style.fontSize='20px'; this.style.transitionDuration='0.4s'" onmouseout="this.style.fontSize='16px';">Ostali random alati</p>
 					</div>
 					<div id="Home_desno">
-						<h3 class="default">Tvoji podaci kazu:</h3>
+						<h2 class="accent">Statistika:</h2>
 						<p id="Home_TvojiPodaci"></p>
+						<p class="default">Ukupno vreme provedeno na sajtu: <span id="trajanjeALL" class="accent"></span><span id="trajanjeDodato" class="default"></span></p>
+						<p class="default">Broj klika na plavo dugme: <span id="button_blue_clicks" class="accent"></span></p>
+						<p class="default">Koliko puta si učitao sajt: <span id="onload_broj" class="accent"></span></p>
 					</div>
 				</div>
 
@@ -210,11 +205,12 @@
 				<div id="Random">
 				<br>
 					<div id="Random1x2x3x">
-					<p class="RNDradialContent">Random Alati: </p><input type="radio" class="radio3" id="RandomRadio1" name="RandomRadio" onchange="RandomRadio1()">
-					<p class="RNDradialContent">Generisi brojeve: </p><input type="radio" class="radio3" id="RandomRadio2" name="RandomRadio" onchange="RandomRadio2()">
-					<p class="RNDradialContent">Pogodi broj: </p><input type="radio" class="radio3" id="RandomRadio3" name="RandomRadio" onchange="RandomRadio3()">
-					<p class="RNDradialContent">Saberi ako mozes: </p><input type="radio" class="radio3" id="RandomRadio4" name="RandomRadio" onchange="RandomRadio4()">
-					<p class="RNDradialContent">Glavni gradovi: </p><input type="radio" class="radio3" id="RandomRadio5" name="RandomRadio" onchange="RandomRadio5()">
+					<p class="default" style="display: inline-block;">Random Alati: </p><input type="radio" class="radio3" id="RandomRadio1" name="RandomRadio" onchange="RandomRadio1()">
+					<p class="default" style="display: inline-block;">Generisi brojeve: </p><input type="radio" class="radio3" id="RandomRadio2" name="RandomRadio" onchange="RandomRadio2()">
+					<p class="default" style="display: inline-block;">Pogodi broj: </p><input type="radio" class="radio3" id="RandomRadio3" name="RandomRadio" onchange="RandomRadio3()">
+					<p class="default" style="display: inline-block;">Saberi ako mozes: </p><input type="radio" class="radio3" id="RandomRadio4" name="RandomRadio" onchange="RandomRadio4()">
+					<p class="default" style="display: inline-block;">Glavni gradovi: </p><input type="radio" class="radio3" id="RandomRadio5" name="RandomRadio" onchange="RandomRadio5()">
+					<p class="default" style="display: inline-block;">RPS: </p><input type="radio" class="radio3" id="RandomRadio6" name="RandomRadio" onchange="RandomRadio6()">
 					</div>
 					<br>
 					<div id="Random1x">
@@ -303,7 +299,7 @@
 							<input type="button" class="button_red" id="GGIzaberi" value="To me pitaj!" onclick="GGIzaberi()">
 							<input type="button" class="button_orange" id="GGIzvuci" value="Izvuci drzavu" onclick="GGIzvuci()">
 							<p id="GGdemo" class="default"></p>
-							<input type="text" class="default_input" align="middle" id="GGInput"><input type="button" class="button_green" id="GGProveri" value="Proveri" onclick="GGProveri1()">
+							<input type="text" class="default_input" align="middle" id="GGInput" oninput="GG_veliko_slovo()"><input type="button" class="button_green" id="GGProveri" value="Proveri" onclick="GGProveri1()">
 							<p id="vodicGG" class="default"></p>
 							</div>
 						</div>
@@ -320,6 +316,11 @@
 							</div>
 							<ol id="GGsve_lista" class="default"></ol>
 						</div>
+					</div>
+					<div id="Random6x">
+						<iframe src="RPS/rps_html.html" height="400pt" width="100%" frameborder="0"> 
+ 						   Your browser doesn’t support the iframe tag. 
+						</iframe>
 					</div>
 
 				</div>
@@ -339,10 +340,11 @@
 							<td style="text-align:center; border-right:1px solid white">
 								<p class="default">Upisi HEX: </p><input type="text" class="default_input" id="boje_hex" size="3" oninput="changeBoje_jasemenjam_HEX()" onchange="changeBoje_jasemenjam_HEX()">
 							</td>
-							<td style="text-align:center" width="10px">
+							<td style="text-align:center;" width="10px">
 								
 							</td>
 							<td>
+								<p class="accent">Konvertor boja:</p>
 								<p class="default">RGB:</p>
 								<input type="text" class="default_input" id="boje_converter_rgb_r" size="2" oninput="boje_converter()">
 								<input type="text" class="default_input" id="boje_converter_rgb_g" size="2" oninput="boje_converter()">
@@ -384,7 +386,7 @@
   				<input type="button" id="changeOstalo_Otvori" class="button_grey" value="Ostalo" onclick="changeOstalo_Otvori()">
   				<input type="button" id="changeExperiments_Otvori" class="button_red" value="Experiments" onclick="changeExperiments_Otvori()">
   				</div>
-  				<div id="CP_content" style="overflow-y: auto; height: 45%;">
+  				<div id="CP_content" style="overflow-y: auto; height: 55%;">
 	  				<div id="changeBackground" class="defaultDiv_toleft" style="border-right: 4pt solid blue">
 	  					<p class="default">Promeni boju + smer gradienta pozadine:</p>
 	  					<input type="color" id="changeBackground_prvaboja" size="1">
@@ -437,22 +439,52 @@
 			  				<p class="checktext">Ne prikazuj imena kolona:</p> <input type="checkbox" class="checkbox1" id="checkColumn" name="checkbox1" onchange="checkColumn()">
 			  				<br>
 			  				<p class="checktext">Ne prikazuj pomerajuca slova:</p> <input type="checkbox" class="checkbox1" id="checkMarquee" name="checkbox3" onchange="checkMarquee()">
+			  				<br>
+			  				<hr>
+			  				<p class="checktext">Otvori pri sledećem učitavanju sajta: </p> 
+			  				<br>
+			  				<p class="checktext">Sadržaj: </p> 
+			  				<SELECT id="changeDefault_div">
+				  					<OPTION>Home</OPTION>
+			  					<optgroup label="Alati: ">
+									<OPTION>Kalkulator</OPTION>
+									<OPTION>Štoperica</OPTION>
+									<OPTION>To-Do</OPTION>
+									<OPTION>Pomodoro</OPTION>
+									<OPTION>Boje</OPTION>
+									<OPTION>Generiši brojeve</OPTION>
+									<OPTION>Ostali random alati</OPTION>
+								</optgroup>
+								<optgroup label="Igre:">
+									<OPTION>Pogodi broj</OPTION>
+									<OPTION>Saberi ako možeš</OPTION>
+									<OPTION>Glavni gradovi</OPTION>
+									<OPTION>Rock, Paper, Scissors</OPTION>
+								</optgroup>
+							</SELECT>
+							<br>
+							<p class="checktext">Mode sajta: </p> 
+			  				<SELECT id="changeDefault_Mode">
+			  					<optgroup label="Izaberi Mod: ">
+									<OPTION class="defaultModejs">Podrazumevana tema</OPTION>
+									<OPTION class="defaultModejs">Kontrast Mode</OPTION>
+									<OPTION class="defaultModejs">Dark Mode</OPTION>
+								</optgroup>
+							</SELECT>
 		  				</div>
 	  				</div>
 	  				<br>
 	  				<div id="changeExperiments" class="defaultDiv_toleft" style="border-right: 4pt solid red">
 	  					<p class="default">Experiments (refresh to exit):</p>
-	  					<input type="button" id="alltools" class="" onclick="alltools()" value="All Tools Mode!!!">
+	  					<input type="button" id="alltools" class="button_red" onclick="alltools()" value="All Tools Mode!!!">
 	  					<br>
-	  					<input type="button" id="margins" class="" onclick="bodyfitme()" value="bodyfitme">
+	  					<input type="button" id="margins" class="button_red" onclick="bodyfitme()" value="bodyfitme">
 	  					<br>
-	  					<input type="button" id="borders" class="" onclick="allborders()" value="i want limit">
+	  					<input type="button" id="borders" class="button_red" onclick="allborders()" value="i want limit">
 	  				</div>
 	  			</div>
 	  			<p id="StopericaMoved" class="accent defaultDiv_toleft"></p>
   			</div>
-
-
 		</div>
 		<br>
 		<br>
@@ -464,7 +496,6 @@
 		<br>
 		<br>
 		<div id="BuildInfoDiv">
-			<hr>
 			<table>
 				<tr>
 					<button id="BuildInfo" class="button_info" onclick="BuildInfo11()" style="vertical-align:middle"><span>Sta je novo? </span></button>
@@ -478,7 +509,14 @@
 				</tr>
 				<tr>
 					<td>
+						
 						<ul id="BuildInfoList04000" class="default">
+							<h4>Verzija 0.4.000</h4>
+							<li>BugFixes - 0.3.068</li>
+							<li>Kompletno novi UI za RPS + Mogućnost postavljanja podrazumevanog sadržaja i teme pri sl. učitavanju - 0.3.064/0.3.067</li>
+							<li>(New)(Bugfixes) HOME/Content + Transition improvements + Control Panel(opcije) - 0.3.057/0.3.063</li>
+							<li>(BUGFIXES) Glavni gradovi - automatski se postavlja veliko početno slovo - 0.3.056</li>
+							<li>(New)(Beta) Rock, Paper, Scissors + Bugfixes - 0.3.055</li>
 							<li>Big improvements in CSS + a lot of bugfixes - 0.3.049/0.3.054</li>
 							<li>(Opcija) Promeni boju naglaska - 0.3.048</li>
 							<li>Novi UI za (kalkulator + BuildInfo) - 0.3.046/0.3.047</li>
@@ -507,6 +545,7 @@
 					<td>
 						<br>
 						<ul id="BuildInfoList03000" class="default">
+							<h4>Verzija 0.3.000</h4>
 							<li>Iz Alphe u BETU! - 0.3.000</li>
 							<li>(Sve 3 teme)CSS + JavaScript sada rade u simbiozi :) - 0.2.137/0.2.138</li>
 							<li>Bugfixes - 0.2.136</li>
@@ -528,7 +567,7 @@
 				</tr>
 				<tr>
 					<td>
-						<p class="default"> Build / 0.3.054</p>
+						<p class="default"> Build / 0.4.000</p>
 					</td>
 				</tr>
 			</table>
