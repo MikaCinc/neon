@@ -1,4 +1,159 @@
+console.log("Powered by: MikaC_Inc")
+// Sve što se učitava na početku:
+window.onload = function(){
+// Koliko puta je učitan sajt:
+var broj_ucitavanja_sajta = parseInt(localStorage.getItem("broj_ucitavanja_sajta_item"))
+if(isNaN(broj_ucitavanja_sajta) == true){
+	broj_ucitavanja_sajta = parseInt(1);
+	document.getElementById("onload_broj").innerHTML = broj_ucitavanja_sajta;
+} else {
+	broj_ucitavanja_sajta = parseInt(localStorage.getItem("broj_ucitavanja_sajta_item"));
+	document.getElementById("onload_broj").innerHTML = broj_ucitavanja_sajta;
+}
+// Trajanje trenutne sesije
+	var trajanje = 0;
+	var interval = setInterval(incrementUvod, 1000);
+	function incrementUvod(){
+		trajanje = trajanje + 1;
+		document.getElementById("trajanjeSpan").innerHTML = parseInt(trajanje);
+		document.getElementById("trajanjeDodato").innerHTML = " + " + trajanje;
+	}
+// Ukupno trajanje sesije - trajanjeALL:
+	var readTrajanje = parseInt(localStorage.getItem('upisiTrajanje'));
+	var trajanjeALL = parseInt(readTrajanje, 10);
+	if(isNaN(trajanjeALL) == true){
+		trajanjeALL = parseInt(0);
+		document.getElementById("trajanjeALL").innerHTML = trajanjeALL;
+	} else {
+		trajanjeALL = parseInt(readTrajanje);
+		document.getElementById("trajanjeALL").innerHTML = trajanjeALL;
+	}
+// Koliko je sati?
+	var kolikojesati = setInterval(function(){ myTimer() }, 1000);
+	function myTimer() {
+	    var d = new Date();
+	    var t = d.toLocaleTimeString();
+	    document.getElementById("kolikojesati").innerHTML = t;
+	}
+// Datum ulaska na sajt
+	var datum = new Date()
+	document.getElementById("datum").innerHTML = "Danasnji datum je: " + datum.toDateString();
+// Broj klika na button_blue klasu:
+var class_button_blue_click = parseInt(localStorage.getItem("upisiButton_blue_clicks"));
+if(isNaN(class_button_blue_click) == true){
+	class_button_blue_click = parseInt(0);
+	document.getElementById("button_blue_clicks").innerHTML = class_button_blue_click;
+} else {
+	class_button_blue_click = parseInt(localStorage.getItem("upisiButton_blue_clicks"));
+	document.getElementById("button_blue_clicks").innerHTML = class_button_blue_click;
+}
+var class_button_blue = document.getElementsByClassName("button_blue");
+for (b=0; b<class_button_blue.length; b++) {
+	class_button_blue[b].addEventListener("click", function(){
+		class_button_blue_click += 1
+		document.getElementById("button_blue_clicks").innerHTML = class_button_blue_click;
+	})	
+}
+// Koji Div učitati?
+var default_div_učitano = localStorage.getItem("default_div")
+console.log("Podrazumevano otvaram: " + default_div_učitano)
+if(default_div_učitano == "Home"){
+	changeContent0()
+}
+if(default_div_učitano == "Kalkulator"){
+	changeContent1()
+}
+if(default_div_učitano == "Štoperica"){
+	changeContent2()
+}
+if(default_div_učitano == "To-Do"){
+	changeContent3()
+}
+if(default_div_učitano == "Pomodoro"){
+	changeContent5()
+}
+if(default_div_učitano == "Boje"){
+	changeContent6()
+}
+if(default_div_učitano == "Generiši brojeve"){
+	changeContent4()
+	RandomRadio2()
+}
+if(default_div_učitano == "Ostali random alati"){
+	changeContent4()
+	RandomRadio1()
+}
+if(default_div_učitano == "Pogodi broj"){
+	changeContent4()
+	RandomRadio3()
+}
+if(default_div_učitano == "Saberi ako možeš"){
+	changeContent4()
+	RandomRadio4()
+}
+if(default_div_učitano == "Glavni gradovi"){
+	changeContent4()
+	RandomRadio5()
+}
+if(default_div_učitano == "Rock, Paper, Scissors"){
+	changeContent4()
+	RandomRadio6()
+}
+// Da uvek selektuje ponovo opciju za DEFAULT DIV koja je prethodno postavljena:
+// Možda u budućnosti dođe do neke greške jer je su ovde selektovani svi <option> elementi
+// U tom slučaju, zameni getEle..ByTagName sa getEle...ByClassName i dodaj svakom elementu ove grupe <option> tagova neku istu klasu! :)
+var set_default_option = document.getElementsByTagName("option");
+for (var k = 0; k<set_default_option.length; k++){
+	if(set_default_option[k].innerHTML == default_div_učitano){
+		set_default_option[k].selected = true;
+	}
+}
+// Koju Mode učitati na početku:
+var default_mode_učitano = localStorage.getItem("default_mode")
+console.log("Podrazumevani Mod sajta je: " + default_mode_učitano)
+if(default_mode_učitano === null){
+	changeTheme1()
+} 
+if(default_mode_učitano == "Podrazumevana tema"){
+	changeTheme1()
+}
+if(default_mode_učitano == "Kontrast Mode"){
+	changeTheme2()
+}
+if(default_mode_učitano == "Dark Mode"){
+	changeTheme3()
+} 
+// Da uvek selektuje ponovo opciju za DEFAULT MODE koja je prethodno postavljena:
+var set_default_mode = document.getElementsByClassName("defaultModejs");
+for (var j = 0; j<set_default_mode.length; j++){
+	if(set_default_mode[j].innerHTML == default_mode_učitano){
+		set_default_mode[j].selected = true;
+	}
+}
+}
+// Sve što se dašava pri zatvaranju:
+window.onunload = function() {
+	// Za ukupno trajanje!
+	var upisi_trajanje1 = parseInt(document.getElementById("trajanjeALL").innerHTML, 10)
+	var upisi_trajanje2 = parseInt(document.getElementById("trajanjeSpan").innerHTML, 10)
+	var upisi_trajanje = parseInt(upisi_trajanje1 + upisi_trajanje2)
+	localStorage.setItem('upisiTrajanje', upisi_trajanje);
+	// Za plavo dugme
+	var upisi_button_blue_clicks = parseInt(document.getElementById("button_blue_clicks").innerHTML, 10)
+	localStorage.setItem('upisiButton_blue_clicks', upisi_button_blue_clicks);
+	// Koliko puta je učitan sajt:
+	broj_ucitavanja_sajta2 = parseInt(document.getElementById("onload_broj").innerHTML)
+	broj_ucitavanja_sajta2 += 1;
+	localStorage.setItem("broj_ucitavanja_sajta_item", broj_ucitavanja_sajta2)
+	// Izbor za default div pri otvaranju:
+	default_div_user = document.getElementById("changeDefault_div").value;
+	localStorage.setItem("default_div", default_div_user);
+	// Izbor za default Mode pri otvaranju:
+	default_mode_user = document.getElementById("changeDefault_Mode").value;
+	localStorage.setItem("default_mode", default_mode_user);
+}
 // ----------- HOME:
+
 
 // -----------Skripte za kalkulator
 
@@ -200,54 +355,60 @@ function Stoperica_Smanji(){
 // ----------Skripte za RANDOM operacije
 
 function RandomRadio1(){
-		document.getElementById("Boje").style.display = "none"
-		document.getElementById("Random").style.display = "block"
-		document.getElementById("radioContent4").checked = "true"
-		document.getElementById('Random1x').style.display = 'block'
-		document.getElementById('Random2x').style.display = 'none'
-		document.getElementById('Random3x').style.display = 'none'
-		document.getElementById('Random4x').style.display = 'none'
-		document.getElementById('Random5x').style.display = 'none'
+	document.getElementById("Boje").style.display = "none"
+	document.getElementById("Random").style.display = "block"
+	document.getElementById("radioContent4").checked = "true"
+	document.getElementById('Random1x').style.display = 'block'
+	document.getElementById('Random2x').style.display = 'none'
+	document.getElementById('Random3x').style.display = 'none'
+	document.getElementById('Random4x').style.display = 'none'
+	document.getElementById('Random5x').style.display = 'none'
+	document.getElementById('Random6x').style.display = 'none'
 }
 
 function RandomRadio2(){
-	if(document.getElementById('RandomRadio2').checked){
-		document.getElementById('Random1x').style.display = 'none'
-		document.getElementById('Random2x').style.display = 'block'
-		document.getElementById('Random3x').style.display = 'none'
-		document.getElementById('Random4x').style.display = 'none'
-		document.getElementById('Random5x').style.display = 'none'
-	}
+	document.getElementById('Random1x').style.display = 'none'
+	document.getElementById('Random2x').style.display = 'block'
+	document.getElementById('Random3x').style.display = 'none'
+	document.getElementById('Random4x').style.display = 'none'
+	document.getElementById('Random5x').style.display = 'none'
+	document.getElementById('Random6x').style.display = 'none'
 }
 
 function RandomRadio3(){
-	if(document.getElementById('RandomRadio3').checked){
-		document.getElementById('Random1x').style.display = 'none'
-		document.getElementById('Random2x').style.display = 'none'
-		document.getElementById('Random3x').style.display = 'block'
-		document.getElementById('Random4x').style.display = 'none'
-		document.getElementById('Random5x').style.display = 'none'
-	}
+	document.getElementById('Random1x').style.display = 'none'
+	document.getElementById('Random2x').style.display = 'none'
+	document.getElementById('Random3x').style.display = 'block'
+	document.getElementById('Random4x').style.display = 'none'
+	document.getElementById('Random5x').style.display = 'none'
+	document.getElementById('Random6x').style.display = 'none'
 }
 
 function RandomRadio4(){
-	if(document.getElementById('RandomRadio4').checked){
-		document.getElementById('Random1x').style.display = 'none'
-		document.getElementById('Random2x').style.display = 'none'
-		document.getElementById('Random3x').style.display = 'none'
-		document.getElementById('Random4x').style.display = 'block'
-		document.getElementById('Random5x').style.display = 'none'
-	}
+	document.getElementById('Random1x').style.display = 'none'
+	document.getElementById('Random2x').style.display = 'none'
+	document.getElementById('Random3x').style.display = 'none'
+	document.getElementById('Random4x').style.display = 'block'
+	document.getElementById('Random5x').style.display = 'none'
+	document.getElementById('Random6x').style.display = 'none'
 }
 
 function RandomRadio5(){
-	if(document.getElementById('RandomRadio5').checked){
-		document.getElementById('Random1x').style.display = 'none'
-		document.getElementById('Random2x').style.display = 'none'
-		document.getElementById('Random3x').style.display = 'none'
-		document.getElementById('Random4x').style.display = 'none'
-		document.getElementById('Random5x').style.display = 'block'
-	}
+	document.getElementById('Random1x').style.display = 'none'
+	document.getElementById('Random2x').style.display = 'none'
+	document.getElementById('Random3x').style.display = 'none'
+	document.getElementById('Random4x').style.display = 'none'
+	document.getElementById('Random5x').style.display = 'block'
+	document.getElementById('Random6x').style.display = 'none'
+}
+
+function RandomRadio6(){
+	document.getElementById('Random1x').style.display = 'none'
+	document.getElementById('Random2x').style.display = 'none'
+	document.getElementById('Random3x').style.display = 'none'
+	document.getElementById('Random4x').style.display = 'none'
+	document.getElementById('Random5x').style.display = 'none'
+	document.getElementById('Random6x').style.display = 'block'
 }
 
 // Random boja:
@@ -755,6 +916,14 @@ function GGProveri1(){
     document.getElementById("GGInput").value = "";
 }
 
+// GG Prvo slovo za input ide veliko
+function GG_veliko_slovo() {
+	var GGveliko = document.getElementById("GGInput").value
+	var GGG = GGveliko.charAt(0).toUpperCase() + GGveliko.slice(1)  // Prvo slovo upisanog ide uppercase + .slice(početak, kraj), u ovom slučaju 1 je nastavak...
+	var GGGG = GGG.toString() // Prebacimo ga u String
+	document.getElementById("GGInput").value = GGGG.toString() // I nazad u input
+}	
+
 // GG Change
 
 function GGchange() {
@@ -765,9 +934,6 @@ function GGchange() {
 	document.getElementById("GGInput").value = "";
 	document.getElementById("vodicGG").innerHTML = "";
 }
-
-
-
 // Pretraga za GG
 
 function GGPretraga(){
@@ -843,7 +1009,6 @@ function changeBoje_jasemenjam_HEX() {
 }
 
 // Boje converter
-
 function boje_converter() {
 	var rgb_r1 = document.getElementById("boje_converter_rgb_r");
 	var rgb_g1 = document.getElementById("boje_converter_rgb_g");
@@ -1081,6 +1246,8 @@ function alltools() {
 	document.getElementById('Random').style.borderStyle = 'solid'
 	document.getElementById('Pomodoro').style.display = 'inline-block'
 	document.getElementById('Pomodoro').style.borderStyle = 'solid'
+	document.getElementById('Boje').style.display = 'inline-block'
+	document.getElementById('Boje').style.borderStyle = 'solid'
 }
 // marginee
 function bodyfitme() {
@@ -1100,111 +1267,132 @@ function allborders(){
 
 // ----------Skripte za ostale elemente sajta
 function changeContent0(){
-	if(document.getElementById('radioContent0').checked){
-		document.getElementById('Home').style.display = 'block'
-		document.getElementById('Calculator').style.display = 'none'
-		document.getElementById('Stoperica').style.display = 'none'
-		document.getElementById('To-Do').style.display = 'none'
-		document.getElementById('Random').style.display = 'none'
-		document.getElementById('Pomodoro').style.display = 'none'
-		document.getElementById('Boje').style.display = 'none'
-	}
+	document.getElementById('Home').style.display = 'block'
+	document.getElementById('Calculator').style.display = 'none'
+	document.getElementById('Stoperica').style.display = 'none'
+	document.getElementById('To-Do').style.display = 'none'
+	document.getElementById('Random').style.display = 'none'
+	document.getElementById('Pomodoro').style.display = 'none'
+	document.getElementById('Boje').style.display = 'none'
 }
 
 
 function changeContent1(){
-	if(document.getElementById('radioContent1').checked){
-		document.getElementById('Home').style.display = 'none'
-		document.getElementById('Calculator').style.display = 'block'
-		document.getElementById('Stoperica').style.display = 'none'
-		document.getElementById('To-Do').style.display = 'none'
-		document.getElementById('Random').style.display = 'none'
-		document.getElementById('Pomodoro').style.display = 'none'
-		document.getElementById('Boje').style.display = 'none'
-	}
+	document.getElementById('Home').style.display = 'none'
+	document.getElementById('Calculator').style.display = 'block'
+	document.getElementById('Stoperica').style.display = 'none'
+	document.getElementById('To-Do').style.display = 'none'
+	document.getElementById('Random').style.display = 'none'
+	document.getElementById('Pomodoro').style.display = 'none'
+	document.getElementById('Boje').style.display = 'none'
 }
 
 function changeContent2(){
-	if(document.getElementById('radioContent2').checked){
-		document.getElementById('Home').style.display = 'none'
-		document.getElementById('Calculator').style.display = 'none'
-		document.getElementById('Stoperica').style.display = 'block'
-		document.getElementById('To-Do').style.display = 'none'
-		document.getElementById('Random').style.display = 'none'
-		document.getElementById('Pomodoro').style.display = 'none'
-		document.getElementById('Boje').style.display = 'none'
-	}
+	document.getElementById('Home').style.display = 'none'
+	document.getElementById('Calculator').style.display = 'none'
+	document.getElementById('Stoperica').style.display = 'block'
+	document.getElementById('To-Do').style.display = 'none'
+	document.getElementById('Random').style.display = 'none'
+	document.getElementById('Pomodoro').style.display = 'none'
+	document.getElementById('Boje').style.display = 'none'
 }
 
 function changeContent3(){
-	if(document.getElementById('radioContent3').checked){
-		document.getElementById('Home').style.display = 'none'
-		document.getElementById('Calculator').style.display = 'none'
-		document.getElementById('Stoperica').style.display = 'none'
-		document.getElementById('To-Do').style.display = 'block'
-		document.getElementById('Random').style.display = 'none'
-		document.getElementById('Pomodoro').style.display = 'none'
-		document.getElementById('Boje').style.display = 'none'
-	}
+	document.getElementById('Home').style.display = 'none'
+	document.getElementById('Calculator').style.display = 'none'
+	document.getElementById('Stoperica').style.display = 'none'
+	document.getElementById('To-Do').style.display = 'block'
+	document.getElementById('Random').style.display = 'none'
+	document.getElementById('Pomodoro').style.display = 'none'
+	document.getElementById('Boje').style.display = 'none'
 }
 
 function changeContent4(){
-	if(document.getElementById('radioContent4').checked){
-		document.getElementById('Home').style.display = 'none'
-		document.getElementById('Calculator').style.display = 'none'
-		document.getElementById('Stoperica').style.display = 'none'
-		document.getElementById('To-Do').style.display = 'none'
-		document.getElementById('Random').style.display = 'block'
-		document.getElementById('Pomodoro').style.display = 'none'
-		document.getElementById('Boje').style.display = 'none'
-	}
+	document.getElementById('Home').style.display = 'none'
+	document.getElementById('Calculator').style.display = 'none'
+	document.getElementById('Stoperica').style.display = 'none'
+	document.getElementById('To-Do').style.display = 'none'
+	document.getElementById('Random').style.display = 'block'
+	document.getElementById('Pomodoro').style.display = 'none'
+	document.getElementById('Boje').style.display = 'none'
 }
 
 function changeContent5(){
-	if(document.getElementById('radioContent5').checked){
-		document.getElementById('Home').style.display = 'none'
-		document.getElementById('Calculator').style.display = 'none'
-		document.getElementById('Stoperica').style.display = 'none'
-		document.getElementById('To-Do').style.display = 'none'
-		document.getElementById('Random').style.display = 'none'
-		document.getElementById('Pomodoro').style.display = 'block'
-		document.getElementById('Boje').style.display = 'none'
-	}
+	document.getElementById('Home').style.display = 'none'
+	document.getElementById('Calculator').style.display = 'none'
+	document.getElementById('Stoperica').style.display = 'none'
+	document.getElementById('To-Do').style.display = 'none'
+	document.getElementById('Random').style.display = 'none'
+	document.getElementById('Pomodoro').style.display = 'block'
+	document.getElementById('Boje').style.display = 'none'
 }
 
 function changeContent6(){
-	if(document.getElementById('radioContent6').checked){
-		document.getElementById('Home').style.display = 'none'
-		document.getElementById('Calculator').style.display = 'none'
-		document.getElementById('Stoperica').style.display = 'none'
-		document.getElementById('To-Do').style.display = 'none'
-		document.getElementById('Random').style.display = 'none'
-		document.getElementById('Pomodoro').style.display = 'none'
-		document.getElementById('Boje').style.display = 'block'
-	}
+	document.getElementById('Home').style.display = 'none'
+	document.getElementById('Calculator').style.display = 'none'
+	document.getElementById('Stoperica').style.display = 'none'
+	document.getElementById('To-Do').style.display = 'none'
+	document.getElementById('Random').style.display = 'none'
+	document.getElementById('Pomodoro').style.display = 'none'
+	document.getElementById('Boje').style.display = 'block'
 }
 
 
 function changeTheme1(){
-	if(document.getElementById('radioTheme1').checked){
-		document.getElementById('pagestyle').setAttribute('href', "style.css")
+	document.getElementById('radioTheme1').checked = true
+	document.getElementById('pagestyle').setAttribute('href', "style.css")
+	document.getElementById("Body").style.background = "linear-gradient(var(--bckgrsmer), var(--bckgr1), var(--bckgr2))"
+	var accentClass = document.getElementsByClassName("accent")
+	for (d=0; d<accentClass.length; d++) {
+		accentClass[d].style.color = "cyan";
 	}
-	
+	var importantClass = document.getElementsByClassName("important")
+	for (g=0; g<importantClass.length; g++) {
+		importantClass[g].style.setProperty("--accent-color", "cyan");
+	}
+	var default_inputClass = document.getElementsByClassName("default_input")
+	for (g=0; g<default_inputClass.length; g++) {
+		default_inputClass[g].style.setProperty("--accent-color", "cyan");
+		}
 }
 
 
 function changeTheme2(){
-	if(document.getElementById('radioTheme2').checked){
-		document.getElementById('pagestyle').setAttribute('href', "style2.css")
+	document.getElementById('radioTheme2').checked = true
+	document.getElementById('pagestyle').setAttribute('href', "style2.css")
+	document.getElementById("changeBackground").style.display = "none"
+	document.getElementById("Body").style.background = "#fff"
+	var accentClass = document.getElementsByClassName("accent")
+	for (d=0; d<accentClass.length; d++) {
+		accentClass[d].style.color = "#000000";
 	}
-	
+	var importantClass = document.getElementsByClassName("important")
+	for (g=0; g<importantClass.length; g++) {
+		importantClass[g].style.setProperty("--accent-color", "#000000");
+	}
+	var default_inputClass = document.getElementsByClassName("default_input")
+	for (g=0; g<default_inputClass.length; g++) {
+		default_inputClass[g].style.setProperty("--accent-color", "#000000");
+	}
 }
 
 function changeTheme3(){
-	if(document.getElementById('radioTheme3').checked){
-		document.getElementById('pagestyle').setAttribute('href', "style3.css")
+	document.getElementById('radioTheme3').checked = true
+	document.getElementById('pagestyle').setAttribute('href', "style3.css")
+	document.getElementById("changeBackground").style.display = "none"
+	document.getElementById("Body").style.background = "#000"
+	var accentClass = document.getElementsByClassName("accent")
+	for (d=0; d<accentClass.length; d++) {
+		accentClass[d].style.color = "#00ff00";
 	}
-	
+	var importantClass = document.getElementsByClassName("important")
+	for (g=0; g<importantClass.length; g++) {
+		importantClass[g].style.setProperty("--accent-color", "#00ff00");
+	}
+	var default_inputClass = document.getElementsByClassName("default_input")
+	for (g=0; g<default_inputClass.length; g++) {
+		default_inputClass[g].style.setProperty("--accent-color", "#00ff00");
+	}
 }
 
 // potreban je loop da bi se cela klasa promenila
@@ -1236,15 +1424,12 @@ function checkInfo1(){
 
 
 function checkMarquee(){
-	var x = document.getElementsByClassName('marquee');
-	var i = []
-	for (i=0; i<x.length; i++){
-		if(document.getElementById('checkMarquee').checked){
-			x[i].style.display = 'none'
-		}
-		else{
-			x[i].style.display = 'block'
-		}
+	var x = document.getElementById('marquee1');
+	if(document.getElementById('checkMarquee').checked){
+		x.style.display = 'none'
+	}
+	else{
+		x.style.display = 'block'
 	}
 }
 
@@ -1288,14 +1473,10 @@ function BuildInfo03000() {
 	if (buildinfo03000 == 0){
 		document.getElementById("BuildInfoList03000").style.display = "block"
 		document.getElementById("BuildInfo03000").value = "(0.3.000)X"
-		document.getElementById("BuildInfo03000").style.backgroundColor = "red"
-		document.getElementById("BuildInfo03000").style.color = "white"
 		buildinfo03000 += 1
 	} else if (buildinfo03000 == 1){
 		document.getElementById("BuildInfoList03000").style.display = "none"
 		document.getElementById("BuildInfo03000").value = "Build 0.3.000"
-		document.getElementById("BuildInfo03000").style.backgroundColor = "white"
-		document.getElementById("BuildInfo03000").style.color = "black"
 		buildinfo03000 -= 1
 	}
 }
@@ -1305,14 +1486,10 @@ function BuildInfo04000() {
 	if (buildinfo04000 == 0){
 		document.getElementById("BuildInfoList04000").style.display = "block"
 		document.getElementById("BuildInfo04000").value = "(0.4.000)X"
-		document.getElementById("BuildInfo04000").style.backgroundColor = "red"
-		document.getElementById("BuildInfo04000").style.color = "white"
 		buildinfo04000 += 1
 	} else if (buildinfo04000 == 1){
 		document.getElementById("BuildInfoList04000").style.display = "none"
 		document.getElementById("BuildInfo04000").value = "Build 0.4.000"
-		document.getElementById("BuildInfo04000").style.backgroundColor = "white"
-		document.getElementById("BuildInfo04000").style.color = "black"
 		buildinfo04000 -= 1
 	}
 }
@@ -1321,36 +1498,42 @@ function BuildInfo04000() {
 // ChangeBackGround
 var changeBackground_Otvori_varijabla = 0;
 function changeBackground_Otvori(){
-	if(changeBackground_Otvori_varijabla == 0){
-		document.getElementById("changeBackground").style.display = "block";
-		document.getElementById("changeBackground_Otvori").value = "(tema sajta)X";
-		changeBackground_Otvori_varijabla += 1;
+	if(document.getElementById("radioTheme1").checked){
+		if(changeBackground_Otvori_varijabla == 0){
+			document.getElementById("changeBackground").style.display = "block";
+			document.getElementById("changeBackground_Otvori").value = "(tema sajta)X";
+			changeBackground_Otvori_varijabla += 1;
+		} else {
+			document.getElementById("changeBackground").style.display = "none";
+			document.getElementById("changeBackground_Otvori").value = "Tema sajta";
+			changeBackground_Otvori_varijabla -= 1;
+		}
 	} else {
-		document.getElementById("changeBackground").style.display = "none";
-		document.getElementById("changeBackground_Otvori").value = "Tema sajta";
-		changeBackground_Otvori_varijabla -= 1;
+		alert("Mozes da menjas samo PODRAZUMEVANU temu!")
 	}
 	
 }
 
 function solidbackgroundcolor() {
 	var arg = document.getElementById("izabranaboja").value;
-	document.body.style.background = arg;
+	document.getElementById("Body").style.background = arg;
 }
 
 function changeBackground() {
 	var bckgrsmer = document.getElementById("changeBackground_smer").value
 	var bckgr1 = document.getElementById("changeBackground_prvaboja").value
 	var bckgr2 = document.getElementById("changeBackground_drugaboja").value
-	document.body.style.background = 'linear-gradient(' + bckgrsmer + ', ' + bckgr1 + ', ' + bckgr2 + ')';
-	document.getElementById("CP_kategorije").style.backgroundColor = bckgr2;
-	document.getElementById("CP_kategorije").style.border = "solid" + bckgr1;
-	document.getElementById("changeContent").style.backgroundColor = bckgr1;
-	document.getElementById("changeContent").style.border = "solid" + bckgr2;
+	document.getElementById("Body").style.setProperty("--bckgrsmer", bckgrsmer)
+	document.getElementById("Body").style.setProperty("--bckgr1", bckgr1)
+	document.getElementById("Body").style.setProperty("--bckgr2", bckgr2)
+	document.getElementById("CP_kategorije").style.setProperty("--CP-background", bckgr2)
+	document.getElementById("CP_kategorije").style.setProperty("--CP-border", bckgr1)
+	document.getElementById("changeContent").style.setProperty("--ChangeContent-background", bckgr1)
+	document.getElementById("changeContent").style.setProperty("--ChangeContent-border", bckgr2)
 }
 //accentColor
 function changeAccent() {
-	var accentColor = document.getElementById("changeAccent").value
+	accentColor = document.getElementById("changeAccent").value
 	var accentClass = document.getElementsByClassName("accent")
 	for (d=0; d<accentClass.length; d++) {
 		accentClass[d].style.color = accentColor;
@@ -1363,8 +1546,6 @@ function changeAccent() {
 	for (g=0; g<default_inputClass.length; g++) {
 		default_inputClass[g].style.setProperty("--accent-color", accentColor);
 	}
-	$(':root').css("--accent-color", accentColor)
-	
 }
 
 // ChangeUvod
