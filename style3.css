@@ -43,7 +43,7 @@
   text-align: center;
   font-size: 14px;
   transition: all 0.5s;
-  cursor: pointer;
+  cursor: help;
 }
 
 .button_info span {
@@ -83,7 +83,7 @@
 	font-size: 18px;
 	background-color: black;
     color: var(--accent-color);
-    border: 2px solid var(--accent-color);
+    border: 1.5px solid var(--accent-color);
     cursor: pointer;
 }
 
@@ -95,7 +95,7 @@
 	font-size: 14px;
 	background-color: black;
 	color: grey;
-    border: 2px solid grey;
+    border: 1px solid grey;
     transition-duration: 0.4s;
 }
 
@@ -103,7 +103,7 @@
 	font-size: 14px;
 	background-color: grey;
     color: white;
-    border: 2px solid grey;
+    border: 1px solid grey;
     cursor: pointer;
 }
 
@@ -112,7 +112,7 @@
 	font-size: 14px;
 	background-color: black;
 	color: green;
-    border: 2px solid green;
+    border: 1px solid green;
     transition-duration: 0.4s;
 }
 
@@ -120,7 +120,7 @@
 	font-size: 14px;
 	background-color: green;
     color: white;
-    border: 2px solid green;
+    border: 1px solid green;
     cursor: pointer;
 }
 
@@ -128,7 +128,7 @@
 	font-size: 14px;
 	background-color: black;
 	color: red;
-    border: 2px solid red;
+    border: 1px solid red;
     transition-duration: 0.4s;
 }
 
@@ -136,7 +136,7 @@
 	font-size: 14px;
 	background-color: red;
     color: white;
-    border: 2px solid red;
+    border: 1px solid red;
     cursor: pointer;
 }
 
@@ -144,7 +144,7 @@
 	font-size: 14px;
 	background-color: black;
 	color: blue;
-    border: 2px solid blue;
+    border: 1px solid blue;
     transition-duration: 0.4s;
 }
 
@@ -152,7 +152,7 @@
 	font-size: 14px;
 	background-color: blue;
     color: white;
-    border: 2px solid blue;
+    border: 1px solid blue;
     cursor: pointer;
 }
 
@@ -160,7 +160,7 @@
 	font-size: 14px;
 	background-color: black;
 	color: purple;
-    border: 2px solid purple;
+    border: 1px solid purple;
     transition-duration: 0.4s;
 }
 
@@ -168,7 +168,7 @@
 	font-size: 14px;
 	background-color: purple;
     color: white;
-    border: 2px solid purple;
+    border: 1px solid purple;
     cursor: pointer;
 }
 
@@ -176,7 +176,7 @@
 	font-size: 14px;
 	background-color: black;
 	color: #ff4500;
-    border: 2px solid #ff4500;
+    border: 1px solid #ff4500;
     transition-duration: 0.4s;
     font-weight: 550;
 }
@@ -185,7 +185,7 @@
 	font-size: 14px;
 	background-color: #ff4500;
     color: white;
-    border: 2px solid #ff4500;
+    border: 1px solid #ff4500;
     cursor: pointer;
 }
 
@@ -195,7 +195,7 @@
 	transition-duration: 0.4s;
 	color: var(--accent-color);
 	background: black;
-	border: 2px solid var(--accent-color);
+	border: 1.5px solid var(--accent-color);
 }
 
 .default_input:focus {
@@ -204,6 +204,14 @@
 	color: black;
 	border-radius: 11px;
 	transition-duration: all 0.7s;
+}
+
+/* disable outline when focused */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 /* Control Panel */
@@ -252,7 +260,7 @@
 /* Ostali elementi sajta */
 
 #marquee1{
-	color: #00ff00;
+	color: var(--accent-color);
 }
 
 .column{
@@ -284,8 +292,7 @@
 .mikac_inc{
 	color: #00ff00;
 }
-
-body {
+#Body {
 	background: #000000;
 	transition-duration: 1s;
 }
@@ -315,6 +322,14 @@ body {
 
 .buildinfo {
 	color: #00ff00;
+}
+
+#BuildInfoList03000 {
+	display: none;
+}
+
+#BuildInfoList04000 {
+	display: none;
 }
 
 /* Kalkulator */
@@ -437,6 +452,11 @@ body {
 }
 
 #Random5x {
+	display: none;
+	text-align: center;
+}
+
+#Random6x {
 	display: none;
 	text-align: center;
 }
