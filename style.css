@@ -1,5 +1,5 @@
 :root {
-    --accent-color: cyan;
+    --accent-color: cyan; 
 }
 
 /* DIV kolone */
@@ -48,11 +48,11 @@
   text-align: center;
   font-size: 14px;
   transition: all 0.5s;
-  cursor: pointer;
+  cursor: help;
 }
 
 .button_info span {
-  cursor: pointer;
+  cursor: help;
   display: inline-block;
   position: relative;
   transition: 0.5s;
@@ -80,7 +80,7 @@
 	font-size: 17px;
 	background-color: var(--accent-color);
 	color: black;
-    border: 2px solid black;
+    border: 1.5px solid black;
     transition-duration: 0.4s;
 }
 
@@ -88,7 +88,7 @@
 	font-size: 18px;
 	background-color: black;
     color: var(--accent-color);
-    border: 2px solid var(--accent-color);
+    border: 1.5px solid var(--accent-color);
     cursor: pointer;
 }
 
@@ -100,7 +100,7 @@
 	font-size: 14px;
 	background-color: white;
 	color: green;
-    border: 2px solid green;
+    border: 1px solid green;
     transition-duration: 0.4s;
 }
 
@@ -108,7 +108,7 @@
 	font-size: 14px;
 	background-color: green;
     color: white;
-    border: 2px solid green;
+    border: 1px solid green;
     cursor: pointer;
 }
 
@@ -116,7 +116,7 @@
 	font-size: 14px;
 	background-color: white;
 	color: grey;
-    border: 2px solid grey;
+    border: 1px solid grey;
     transition-duration: 0.4s;
 }
 
@@ -124,7 +124,7 @@
 	font-size: 14px;
 	background-color: grey;
     color: white;
-    border: 2px solid grey;
+    border: 1px solid grey;
     cursor: pointer;
 }
 
@@ -132,7 +132,7 @@
 	font-size: 14px;
 	background-color: white;
 	color: red;
-    border: 2px solid red;
+    border: 1px solid red;
     transition-duration: 0.4s;
 }
 
@@ -140,7 +140,7 @@
 	font-size: 14px;
 	background-color: red;
     color: white;
-    border: 2px solid red;
+    border: 1px solid red;
     cursor: pointer;
 }
 
@@ -148,7 +148,7 @@
 	font-size: 14px;
 	background-color: white;
 	color: blue;
-    border: 2px solid blue;
+    border: 1px solid blue;
     transition-duration: 0.4s;
 }
 
@@ -156,7 +156,7 @@
 	font-size: 14px;
 	background-color: blue;
     color: white;
-    border: 2px solid blue;
+    border: 1px solid blue;
     cursor: pointer;
 }
 
@@ -164,7 +164,7 @@
 	font-size: 14px;
 	background-color: white;
 	color: purple;
-    border: 2px solid purple;
+    border: 1px solid purple;
     transition-duration: 0.4s;
 }
 
@@ -172,7 +172,7 @@
 	font-size: 14px;
 	background-color: purple;
     color: white;
-    border: 2px solid purple;
+    border: 1px solid purple;
     cursor: pointer;
 }
 
@@ -180,7 +180,7 @@
 	font-size: 14px;
 	background-color: white;
 	color: #ff4500;
-    border: 2px solid #ff4500;
+    border: 1px solid #ff4500;
     transition-duration: 0.4s;
     font-weight: 550;
 }
@@ -189,7 +189,7 @@
 	font-size: 14px;
 	background-color: #ff4500;
     color: white;
-    border: 2px solid #ff4500;
+    border: 1px solid #ff4500;
     cursor: pointer;
 }
 
@@ -211,13 +211,24 @@
 
 /* radial */
 .radialContent {
-	
+	text-decoration: none;
+}
+.radialContent:hover {
+	text-decoration: underline;
+}
+
+/* disable outline when focused */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 /* Home div */
 
 #Home {
-	display: none;
+	display: block;
 }
 
 #Home_levo {display: inline-block; float: left; width: 50%;}
@@ -226,8 +237,10 @@
 /* Control Panel */
 
 #CP_kategorije {
-	background: red;
-	border: solid blue;
+	--CP-background: red;
+	--CP-border: blue;
+	background: var(--CP-background);
+	border: solid var(--CP-border);
 	padding: 2%;
 	margin-left: 45%;
 }
@@ -288,8 +301,10 @@
 }
 
 #changeContent{
-	background-color: blue;
-	border: solid red;
+	--ChangeContent-background: blue;
+	--ChangeContent-border: red;
+	background-color: var(--ChangeContent-background);
+	border: solid var(--ChangeContent-border);
 	width: 55%;
 }
 
@@ -298,9 +313,12 @@
 	width: 55%;
 }
 
-body {
+#Body {
+	--bckgrsmer: to right;
+    --bckgr1: blue;
+    --bckgr2: red;
 	transition-duration: 1s;
-	background: linear-gradient(to right, blue , red);
+	background: linear-gradient(var(--bckgrsmer), var(--bckgr1), var(--bckgr2));
 	transition: all 1s linear;
 }
 
@@ -327,16 +345,18 @@ body {
 
 #BuildInfoList03000 {
 	display: none;
+	list-style-type: circle;
 }
 
 #BuildInfoList04000 {
 	display: none;
+	list-style-type: circle;
 }
 
 /* Kalkulator */
 
 #Calculator {
-	display: block;
+	display: none;
     transition: opacity 1s ease-out;
     opacity: 1; 
 }
@@ -448,6 +468,11 @@ body {
 }
 
 #Random5x {
+	display: none;
+	text-align: center;
+}
+
+#Random6x {
 	display: none;
 	text-align: center;
 }
