@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title></title>
+    <script src="rps_js.js"></script>
+    <link rel="stylesheet" href="rps_css.css" type="text/css">
+    <link id="rps_pagestyle" rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body backgroundColor="transparent">
+<table style="margin: 0px auto;" border="0px solid black">
+	<tr>
+		<td id="rps_img-Rock">
+			<img src="Rock.png" class="rps_img" width="100" height="100" id="rps_img-Rock_inner" onclick="rps_rock()">
+		</td>
+		<td id="rps_img-Scissors">
+			<img src="Scissors.png" class="rps_img" width="100" height="100" id="rps_img-Scissors_inner" onclick="rps_scissors()">
+		</td>
+		<td id="rps_img-Paper">
+			<img src="Paper.png" class="rps_img" width="100" height="100" id="rps_img-Paper_inner" onclick="rps_paper()"> 
+		</td>
+		<td>
+			<p style="text-align: center" id="rps_vs"> VS </p>
+		</td>
+		<td id="rps_img-Rock2">
+			<img src="Rock.png" class="rps_img" width="100" id="rps_img-Rock2_inner" height="100" >
+		</td>
+		<td id="rps_img-Scissors2">
+			<img src="Scissors.png" class="rps_img" width="100" id="rps_img-Scissors2_inner" height="100" >
+		</td>
+		<td id="rps_img-Paper2">
+			<img src="Paper.png" class="rps_img" width="100" id="rps_img-Paper2_inner" height="100"> 
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align: center;" colspan="7">
+			<h2 id="rps_rezultat" class="accent"></h2>
+			<input type="button" id="rps_ok" class="important" onclick="rps_ok()" value="Ponovo!">
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align: center;" colspan="7">
+			<p id="rps_Poeni" class="default">Pobedio si: <span id="rps_Poeni_pobediosi" class="accent"></span> ;<br>Nerešeno: <span id="rps_Poeni_nereseno" class="accent"></span> ;<br>Izgubio si: <span id="rps_Poeni_izgubiosi" class="accent"></span><p>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

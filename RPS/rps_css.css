@@ -1,0 +1,55 @@
+.rps_img{
+    cursor: pointer;
+    align-self: center;
+}
+ 
+.rps_img:hover{
+    background-color: var(--accent-color);
+    transition-duration: 0.4s;
+}
+
+#rps_vs{
+    font-size: 50pt;
+    display: none;
+    color: red;
+    transition-duration: 0.4s;
+}
+
+#rps_ok{
+    margin-left: 130px;
+    width: 100px;
+    display: none;
+}
+
+#rps_rezultat{
+    display: inline-block;
+}
+
+#rps_img-Rock_inner {
+    transition-duration: 1s;
+}
+#rps_img-Paper_inner {
+    transition-duration: 1s;
+}
+#rps_img-Scissors_inner {
+    transition-duration: 1s;
+}
+#rps_img-Rock2_inner {
+    transition-duration: 1s;
+}
+#rps_img-Paper2_inner {
+    transition-duration: 1s;
+}
+#rps_img-Scissors2_inner {
+    transition-duration: 1s;
+}
+
+#rps_img-Rock2{
+    display: none;
+}
+#rps_img-Paper2{
+    display: none;
+}
+#rps_img-Scissors2{
+    display: none;
+}
